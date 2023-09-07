@@ -1,2 +1,2 @@
-require("fabiooo4.remap")
-require("fabiooo4.set")
+require("config.remap")
+require("config.set")
