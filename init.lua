@@ -1,1 +1,1 @@
-require('fabiooo4')
+require('config')
