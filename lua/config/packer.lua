@@ -76,4 +76,10 @@ return require('packer').startup(function(use)
 
     -- DevIcons (icons)
     use 'nvim-tree/nvim-web-devicons'
+
+    -- Autopair (auto close brackets)
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 end)
