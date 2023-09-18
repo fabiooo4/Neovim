@@ -165,6 +165,11 @@ _G.packer_plugins = {
     path = "/home/fabio/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  sniprun = {
+    loaded = true,
+    path = "/home/fabio/.local/share/nvim/site/pack/packer/start/sniprun",
+    url = "https://github.com/michaelb/sniprun"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/fabio/.local/share/nvim/site/pack/packer/start/telescope.nvim",

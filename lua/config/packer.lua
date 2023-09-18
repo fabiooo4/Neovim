@@ -82,4 +82,7 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+
+    -- SnipRun (run code)
+    use { 'michaelb/sniprun', run = 'sh ./install.sh'}
 end)
