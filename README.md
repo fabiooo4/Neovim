@@ -1,6 +1,3 @@
-# Neovim
-My Neovim configuration files
-
 # Colorscheme #
 + [Catppuccin](https://github.com/catppuccin/nvim).
 
