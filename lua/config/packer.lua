@@ -32,12 +32,13 @@ return require('packer').startup(function(use)
     -- Copilot
     use('github/copilot.vim')
 
-    -- Neorg (org-mode)
-    use {
-        "nvim-neorg/neorg",
-        run = ":Neorg sync-parsers",
-        requires = "nvim-lua/plenary.nvim",
-    }
+    -- Markdown
+    use('godlygeek/tabular')
+    use('dhruvasagar/vim-table-mode')
+    use('preservim/vim-markdown')
+
+    -- Markdown Preview
+    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
     -- LSP
     use {
