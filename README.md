@@ -18,4 +18,4 @@
 + File icons via [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons).
 + Faster matching pair insertion via [nvim-autopairs](https://github.com/windwp/nvim-autopairs).
 + Code runner via [sniprun](https://github.com/michaelb/sniprun).
-+ Markdown writing and previewing via [vim-markdown](https://github.com/preservim/vim-markdown) and [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim).
++ Markdown writing and previewing via [mkdnflow](https://github.com/jakewvincent/mkdnflow.nvim) and [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim).
