@@ -1,6 +1,9 @@
 filetype plugin indent on
 syntax enable
 
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
 if has('win32') || (has('unix') && exists('$WSLENV'))
     if executable('sioyek.exe')
         let g:vimtex_view_method = 'sioyek'
