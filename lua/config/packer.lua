@@ -1,7 +1,7 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
@@ -38,6 +38,9 @@ return require('packer').startup(function(use)
 
     -- Markdown Preview
     use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+    -- LaTeX
+    use 'lervag/vimtex'
 
     -- LSP
     use {

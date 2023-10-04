@@ -201,6 +201,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fabio/.local/share/nvim/site/pack/packer/start/vim-table-mode",
     url = "https://github.com/dhruvasagar/vim-table-mode"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/fabio/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
