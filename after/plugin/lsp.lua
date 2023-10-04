@@ -16,6 +16,7 @@ lsp.ensure_installed({
 	'tsserver',
 	'lua_ls',
 	'marksman',
+    'ltex-ls',
 	'jedi_language_server',
 	'svelte',
 	'tailwindcss',

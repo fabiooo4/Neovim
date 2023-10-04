@@ -19,3 +19,4 @@
 + Faster matching pair insertion via [nvim-autopairs](https://github.com/windwp/nvim-autopairs).
 + Code runner via [sniprun](https://github.com/michaelb/sniprun).
 + Markdown writing and previewing via [mkdnflow](https://github.com/jakewvincent/mkdnflow.nvim) and [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim).
++ LaTeX writing and previewing via [vimtex](https://github.com/lervag/vimtex#snippets-and-templates) and [sioyek](https://sioyek.info/).
