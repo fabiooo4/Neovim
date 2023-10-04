@@ -6,22 +6,6 @@ lsp.on_attach(function(client, bufnr)
 	lsp.default_keymaps({buffer = bufnr})
 end)
 
-lsp.ensure_installed({
-	'clangd',
-	'cssls',
-	'eslint',
-	'html',
-	'jsonls',
-	'java_language_server',
-	'tsserver',
-	'lua_ls',
-	'marksman',
-    'ltex-ls',
-	'jedi_language_server',
-	'svelte',
-	'tailwindcss',
-})
-
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
