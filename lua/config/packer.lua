@@ -2,90 +2,103 @@
 
 -- Only required if you have packer configured as `opt`
 
+return require("packer").startup(function(use)
+	-- Packer can manage itself
+	use("wbthomason/packer.nvim")
 
-return require('packer').startup(function(use)
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
+	-- Telescope (fuzzy finder)
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.2",
+		-- or                            , branch = '0.1.x',
+		requires = { { "nvim-lua/plenary.nvim" } },
+	})
 
-    -- Telescope (fuzzy finder)
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.2',
-        -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
+	-- Colorschemes
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
-    -- Colorschemes
-    use { "catppuccin/nvim", as = "catppuccin" }
+	-- Treesitter (syntax highlighting)
+	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
-    -- Treesitter (syntax highlighting)
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+	-- Harpoon (quickly jump between files)
+	use("ThePrimeagen/harpoon")
 
-    -- Harpoon (quickly jump between files)
-    use('ThePrimeagen/harpoon')
+	-- UndoTree (visualize undo history)
+	use("mbbill/undotree")
 
-    -- UndoTree (visualize undo history)
-    use('mbbill/undotree')
+	-- Fugitive (Git wrapper)
+	use("tpope/vim-fugitive")
 
-    -- Fugitive (Git wrapper)
-    use('tpope/vim-fugitive')
+	-- Copilot
+	use("github/copilot.vim")
 
-    -- Copilot
-    use('github/copilot.vim')
+	-- Markdown
+	use("jakewvincent/mkdnflow.nvim")
+	use("dhruvasagar/vim-table-mode")
 
-    -- Markdown
-    use('jakewvincent/mkdnflow.nvim')
-    use('dhruvasagar/vim-table-mode')
+	-- Markdown Preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	})
 
-    -- Markdown Preview
-    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+	-- LaTeX
+	use("lervag/vimtex")
 
-    -- LaTeX
-    use 'lervag/vimtex'
+	-- LSP
+	use({
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v2.x",
+		requires = {
+			-- LSP Support
+			{ "neovim/nvim-lspconfig" }, -- Required
 
-    -- LSP
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            -- LSP Support
-            { 'neovim/nvim-lspconfig' }, -- Required
+			-- LSP UI
+			{ "williamboman/mason.nvim" }, -- Optional
+			{ "williamboman/mason-lspconfig.nvim" }, -- Optional
 
-            -- LSP UI
-            { 'williamboman/mason.nvim' },           -- Optional
-            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "L3MON4D3/LuaSnip" }, -- Required
+		},
+	})
 
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },     -- Required
-            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' },     -- Required
-        }
-    }
+	-- Formatter
+	use({ "stevearc/conform.nvim" })
 
-    -- NvimTree (file explorer)
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional
-        },
-    }
+	-- NvimTree (file explorer)
+	use({
+		"nvim-tree/nvim-tree.lua",
+		requires = {
+			"nvim-tree/nvim-web-devicons", -- optional
+		},
+	})
 
-    -- ToggleTerm (terminal)
-    use {
-        "akinsho/toggleterm.nvim", tag = '*'
-    }
+	-- ToggleTerm (terminal)
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+	})
 
-    -- Barbar (tabline)
-    use 'romgrk/barbar.nvim'
+	-- Barbar (tabline)
+	use("romgrk/barbar.nvim")
 
-    -- DevIcons (icons)
-    use 'nvim-tree/nvim-web-devicons'
+	-- DevIcons (icons)
+	use("nvim-tree/nvim-web-devicons")
 
-    -- Autopair (auto close brackets)
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
+	-- Autopair (auto close brackets)
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
 
-    -- SnipRun (run code)
-    use { 'michaelb/sniprun', run = 'sh ./install.sh'}
+	-- SnipRun (run code)
+	use({ "michaelb/sniprun", run = "sh ./install.sh" })
 end)
