@@ -102,6 +102,8 @@ return require("packer").startup(function(use)
 	-- SnipRun (run code)
 	use({ "michaelb/sniprun", run = "sh ./install.sh" })
 
+	use("rafamadriz/friendly-snippets")
+
 	use({
 		"smjonas/snippet-converter.nvim",
 		-- SnippetConverter uses semantic versioning. Example: use version = "1.*" to avoid breaking changes on version 1.

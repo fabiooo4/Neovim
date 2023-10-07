@@ -8,7 +8,7 @@ local luasnip = require("luasnip")
 local cmp = require("cmp")
 
 cmp.setup({
-
+	require("luasnip.loaders.from_vscode").lazy_load(),
 	require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./vscode_snippets" } }),
 
 	-- ... Your other configuration ...
