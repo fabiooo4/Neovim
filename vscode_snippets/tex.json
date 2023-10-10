@@ -10,6 +10,54 @@
       "\\usepackage{textcomp\\}",
       "\\usepackage[italian]{babel\\}",
       "\\usepackage{amsmath, amssymb\\}",
+      "\\usepackage{amsfonts}",
+      "\\usepackage{mdframed}",
+      "\\usepackage{ntheorem}",
+      "\\usepackage{xcolor}",
+      "\\usepackage{graphicx}",
+      "\\graphicspath{{./figures/}}",
+      "",
+      "\\usepackage{import}",
+      "\\usepackage{pdfpages}",
+      "\\usepackage{transparent}",
+      "\\usepackage{xcolor}",
+      "",
+      "% Useful definitions frame",
+      "\\theoremstyle{break}",
+      "\\theoremheaderfont{\\bfseries}",
+      "\\newmdtheoremenv[%",
+      "linecolor=gray,leftmargin=0,%",
+      "rightmargin=0,",
+      "innertopmargin=8pt,%",
+      "ntheorem]{define}{Definizioni utili}[section]",
+      "",
+      "% Example frame",
+      "\\theoremstyle{break}",
+      "\\theoremheaderfont{\\bfseries}",
+      "\\newmdtheoremenv[%",
+      "linecolor=gray,leftmargin=0,%",
+      "rightmargin=0,",
+      "innertopmargin=8pt,%",
+      "ntheorem]{example}{Esempio}[section]",
+      "",
+      "% Important definition frame",
+      "\\theoremstyle{break}",
+      "\\theoremheaderfont{\\bfseries}",
+      "\\newmdtheoremenv[%",
+      "linecolor=gray,leftmargin=0,%",
+      "rightmargin=0,",
+      "backgroundcolor=gray!40,%",
+      "innertopmargin=8pt,%",
+      "ntheorem]{definition}{Definizione}[section]",
+      "",
+      "% Exercise frame",
+      "\\theoremstyle{break}",
+      "\\theoremheaderfont{\\bfseries}",
+      "\\newmdtheoremenv[%",
+      "linecolor=gray,leftmargin=0,%",
+      "rightmargin=0,",
+      "innertopmargin=8pt,%",
+      "ntheorem]{exercise}{Esercizio}[section]",
       "",
       "",
       "% figure support",
@@ -26,7 +74,11 @@
       "\\pdfsuppresswarningpagegroup=1",
       "",
       "\\begin{document\\}",
-      "\t$0",
+      "\\input{title.tex}",
+      "",
+      "\\tableofcontents",
+      "\\pagebreak",
+      "",
       "\\end{document\\}"
     ]
   },
@@ -74,7 +126,7 @@
   "=>": {
     "prefix": "=>",
     "description": "implies",
-    "body": "\\implies",
+    "body": "\\Rightarrow",
     "luasnip": {
       "autotrigger": true
     }
@@ -98,7 +150,7 @@
   "dm": {
     "prefix": "dm",
     "description": "Math",
-    "body": ["\\[", "${1:$TM_SELECTED_TEXT}", ".\\] $0"],
+    "body": ["\\[", "${1:$TM_SELECTED_TEXT}", "\\] $0"],
     "luasnip": {
       "autotrigger": true
     }
@@ -553,10 +605,7 @@
   "compl": {
     "prefix": "compl",
     "description": "complement",
-    "body": "^{c\\}",
-    "luasnip": {
-      "autotrigger": true
-    }
+    "body": "^{c\\}"
   },
   "\\\\\\": {
     "prefix": "\\\\\\",
@@ -617,7 +666,7 @@
   "notin": {
     "prefix": "notin",
     "description": "not in ",
-    "body": "\\not\\in ",
+    "body": "\\notin ",
     "luasnip": {
       "autotrigger": true
     }
@@ -633,7 +682,7 @@
   "NN": {
     "prefix": "NN",
     "description": "n",
-    "body": "\\N",
+    "body": "\\mathbb{N\\}",
     "luasnip": {
       "autotrigger": true
     }
@@ -673,7 +722,7 @@
   "OO": {
     "prefix": "OO",
     "description": "emptyset",
-    "body": "\\O",
+    "body": "\\emptyset ",
     "luasnip": {
       "autotrigger": true
     }
@@ -681,7 +730,7 @@
   "RR": {
     "prefix": "RR",
     "description": "real",
-    "body": "\\R",
+    "body": "\\mathbb{R\\}",
     "luasnip": {
       "autotrigger": true
     }
@@ -689,7 +738,7 @@
   "QQ": {
     "prefix": "QQ",
     "description": "Q",
-    "body": "\\Q",
+    "body": "\\mathbb{Q\\}",
     "luasnip": {
       "autotrigger": true
     }
@@ -697,7 +746,7 @@
   "ZZ": {
     "prefix": "ZZ",
     "description": "Z",
-    "body": "\\Z",
+    "body": "\\mathbb{Z\\}",
     "luasnip": {
       "autotrigger": true
     }
