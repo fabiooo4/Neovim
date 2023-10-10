@@ -14,6 +14,8 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
+	use("benfowler/telescope-luasnip.nvim")
+
 	-- Colorschemes
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
@@ -102,6 +104,7 @@ return require("packer").startup(function(use)
 	-- SnipRun (run code)
 	use({ "michaelb/sniprun", run = "sh ./install.sh" })
 
+	-- friendly Snippets
 	use("rafamadriz/friendly-snippets")
 
 	use({

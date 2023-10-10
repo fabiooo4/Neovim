@@ -147,6 +147,15 @@
       "autotrigger": true
     }
   },
+  "mk": {
+    "prefix": "mk",
+    "description": "Math Inline",
+    "body": ["\\( ${1:$TM_SELECTED_TEXT} \\) "],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+
   "dm": {
     "prefix": "dm",
     "description": "Math",
@@ -325,8 +334,8 @@
     "description": "d/dx",
     "body": "\\frac{\\partial ${1:V}\\}{\\partial ${2:x}\\} $0"
   },
-  "sq": {
-    "prefix": "sq",
+  "sqr": {
+    "prefix": "sqr",
     "description": "\\sqrt{}",
     "body": "\\sqrt{${1:$TM_SELECTED_TEXT}\\} $0",
     "luasnip": {
@@ -767,8 +776,8 @@
       "autotrigger": true
     }
   },
-  "tt": {
-    "prefix": "tt",
+  "tex": {
+    "prefix": "tex",
     "description": "text",
     "body": "\\text{$1\\}$0",
     "luasnip": {

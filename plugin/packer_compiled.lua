@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/fabio/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/fabio/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
   harpoon = {
     loaded = true,
     path = "/home/fabio/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -113,12 +118,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fabio/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
-  },
-  ["luasnip-latex-snippets.nvim"] = {
-    config = { "\27LJ\2\2‡\1\0\0\2\0\6\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\1\3\0B\0\2\0029\0\4\0009\0\2\0005\1\5\0B\0\2\1K\0\1\0\1\0\1\24enable_autosnippets\2\vconfig\fluasnip\nsetup\27luasnip-latex-snippets\frequire\0" },
-    loaded = true,
-    path = "/home/fabio/.local/share/nvim/site/pack/packer/start/luasnip-latex-snippets.nvim",
-    url = "https://github.com/iurimateus/luasnip-latex-snippets.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = false,
@@ -184,7 +183,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["snippet-converter.nvim"] = {
-    config = { "\27LJ\2\2¨\2\0\0\5\0\18\0#5\0\a\0005\1\5\0004\2\3\0006\3\0\0009\3\1\0039\3\2\3'\4\3\0B\3\2\2'\4\4\0&\3\4\3>\3\1\2=\2\6\1=\1\b\0005\1\n\0004\2\3\0006\3\0\0009\3\1\0039\3\2\3'\4\3\0B\3\2\2'\4\t\0&\3\4\3>\3\1\2=\2\v\1=\1\f\0006\1\r\0'\2\14\0B\1\2\0029\1\15\0015\2\16\0004\3\3\0>\0\1\3=\3\17\2B\1\2\1K\0\1\0\14templates\1\0\0\nsetup\22snippet_converter\frequire\voutput\19vscode_luasnip\1\0\0\21/vscode_snippets\fsources\1\0\0\14ultisnips\1\0\0\20/latex-snippets\vconfig\fstdpath\afn\bvim\0" },
+    config = { "\27LJ\2\2Å\2\0\0\5\0\19\0#5\0\b\0005\1\6\0005\2\0\0006\3\1\0009\3\2\0039\3\3\3'\4\4\0B\3\2\2'\4\5\0&\3\4\3>\3\2\2=\2\a\1=\1\t\0005\1\v\0004\2\3\0006\3\1\0009\3\2\0039\3\3\3'\4\4\0B\3\2\2'\4\n\0&\3\4\3>\3\1\2=\2\f\1=\1\r\0006\1\14\0'\2\15\0B\1\2\0029\1\16\0015\2\17\0004\3\3\0>\0\1\3=\3\18\2B\1\2\1K\0\1\0\14templates\1\0\0\nsetup\22snippet_converter\frequire\voutput\19vscode_luasnip\1\0\0\21/vscode_snippets\fsources\1\0\0\14ultisnips\1\0\0\15/UltiSnips\vconfig\fstdpath\afn\bvim\1\2\0\0\"./latex-snippets/tex.snippets\0" },
     loaded = true,
     path = "/home/fabio/.local/share/nvim/site/pack/packer/start/snippet-converter.nvim",
     url = "https://github.com/smjonas/snippet-converter.nvim"
@@ -193,6 +192,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/fabio/.local/share/nvim/site/pack/packer/start/sniprun",
     url = "https://github.com/michaelb/sniprun"
+  },
+  ["telescope-luasnip.nvim"] = {
+    loaded = true,
+    path = "/home/fabio/.local/share/nvim/site/pack/packer/start/telescope-luasnip.nvim",
+    url = "https://github.com/benfowler/telescope-luasnip.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -231,17 +235,13 @@ time([[Defining packer_plugins]], false)
 time([[Setup for markdown-preview.nvim]], true)
 try_loadstring("\27LJ\2\2=\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rmarkdown\19mkdp_filetypes\6g\bvim\0", "setup", "markdown-preview.nvim")
 time([[Setup for markdown-preview.nvim]], false)
--- Config for: luasnip-latex-snippets.nvim
-time([[Config for luasnip-latex-snippets.nvim]], true)
-try_loadstring("\27LJ\2\2‡\1\0\0\2\0\6\0\r6\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\1\3\0B\0\2\0029\0\4\0009\0\2\0005\1\5\0B\0\2\1K\0\1\0\1\0\1\24enable_autosnippets\2\vconfig\fluasnip\nsetup\27luasnip-latex-snippets\frequire\0", "config", "luasnip-latex-snippets.nvim")
-time([[Config for luasnip-latex-snippets.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\2@\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
 -- Config for: snippet-converter.nvim
 time([[Config for snippet-converter.nvim]], true)
-try_loadstring("\27LJ\2\2¨\2\0\0\5\0\18\0#5\0\a\0005\1\5\0004\2\3\0006\3\0\0009\3\1\0039\3\2\3'\4\3\0B\3\2\2'\4\4\0&\3\4\3>\3\1\2=\2\6\1=\1\b\0005\1\n\0004\2\3\0006\3\0\0009\3\1\0039\3\2\3'\4\3\0B\3\2\2'\4\t\0&\3\4\3>\3\1\2=\2\v\1=\1\f\0006\1\r\0'\2\14\0B\1\2\0029\1\15\0015\2\16\0004\3\3\0>\0\1\3=\3\17\2B\1\2\1K\0\1\0\14templates\1\0\0\nsetup\22snippet_converter\frequire\voutput\19vscode_luasnip\1\0\0\21/vscode_snippets\fsources\1\0\0\14ultisnips\1\0\0\20/latex-snippets\vconfig\fstdpath\afn\bvim\0", "config", "snippet-converter.nvim")
+try_loadstring("\27LJ\2\2Å\2\0\0\5\0\19\0#5\0\b\0005\1\6\0005\2\0\0006\3\1\0009\3\2\0039\3\3\3'\4\4\0B\3\2\2'\4\5\0&\3\4\3>\3\2\2=\2\a\1=\1\t\0005\1\v\0004\2\3\0006\3\1\0009\3\2\0039\3\3\3'\4\4\0B\3\2\2'\4\n\0&\3\4\3>\3\1\2=\2\f\1=\1\r\0006\1\14\0'\2\15\0B\1\2\0029\1\16\0015\2\17\0004\3\3\0>\0\1\3=\3\18\2B\1\2\1K\0\1\0\14templates\1\0\0\nsetup\22snippet_converter\frequire\voutput\19vscode_luasnip\1\0\0\21/vscode_snippets\fsources\1\0\0\14ultisnips\1\0\0\15/UltiSnips\vconfig\fstdpath\afn\bvim\1\2\0\0\"./latex-snippets/tex.snippets\0", "config", "snippet-converter.nvim")
 time([[Config for snippet-converter.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
