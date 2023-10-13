@@ -138,7 +138,4 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
-
-	-- AutoSave
-	use("Pocco81/auto-save.nvim")
 end)
