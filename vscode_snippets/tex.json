@@ -1,6 +1,6 @@
 {
   "template": {
-    "prefix": "template",
+    "prefix": "templatelatex",
     "description": "Basic template",
     "body": [
       "\\documentclass[a4paper]{article\\}",
@@ -171,10 +171,7 @@
       "\\begin{align*\\}",
       "\t${1:$TM_SELECTED_TEXT}",
       ".\\end{align*\\}"
-    ],
-    "luasnip": {
-      "autotrigger": true
-    }
+    ]
   },
   "//": {
     "prefix": "//",
@@ -777,7 +774,7 @@
     }
   },
   "tex": {
-    "prefix": "tex",
+    "prefix": "ttex",
     "description": "text",
     "body": "\\text{$1\\}$0",
     "luasnip": {
