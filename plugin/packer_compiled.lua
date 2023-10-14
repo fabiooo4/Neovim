@@ -79,11 +79,6 @@ _G.packer_plugins = {
     path = "/home/fabio/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["auto-save.nvim"] = {
-    loaded = true,
-    path = "/home/fabio/.local/share/nvim/site/pack/packer/start/auto-save.nvim",
-    url = "https://github.com/Pocco81/auto-save.nvim"
-  },
   ["barbar.nvim"] = {
     loaded = true,
     path = "/home/fabio/.local/share/nvim/site/pack/packer/start/barbar.nvim",
