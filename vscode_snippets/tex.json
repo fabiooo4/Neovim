@@ -560,10 +560,7 @@
   "norm": {
     "prefix": "norm",
     "description": "norm",
-    "body": "\\|$1\\|$0",
-    "luasnip": {
-      "autotrigger": true
-    }
+    "body": "\\|$1\\|$0"
   },
   "dint": {
     "prefix": "dint",

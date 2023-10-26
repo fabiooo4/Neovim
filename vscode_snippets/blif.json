@@ -1,0 +1,47 @@
+{
+  "base": {
+    "prefix": "base",
+    "description": "Base BLIF file structure",
+    "body": [
+      ".model ${1:modelName}",
+      ".inputs ${2:input0} ${3:input1}",
+      ".outputs ${4:output0}"
+    ]
+  },
+  "kiss": {
+    "prefix": "kiss",
+    "description": "kiss structure",
+    "body": [
+      ".start_kiss",
+      "\t.i # inputs",
+      "\t.o # outputs",
+      "\t.s # states",
+      "\t.p # elements",
+      "\t.r # reset",
+      "",
+      "\t# inputs state nextState output",
+      "",
+      ".end_kiss"
+    ]
+  },
+  "names": {
+    "prefix": "names",
+    "description": "names structure",
+    "body": [".names ${1:input0} ${2:input1} ${4:output}", ""]
+  },
+  "model": {
+    "prefix": "model",
+    "description": "model instruction",
+    "body": ".model ${1:modelName}"
+  },
+  "inputs": {
+    "prefix": "inputs",
+    "description": "inputs instruction",
+    "body": ".inputs ${1:input0} ${2:input1}"
+  },
+  "outputs": {
+    "prefix": "outputs",
+    "description": "outputs instruction",
+    "body": ".outputs ${1:output0}"
+  }
+}

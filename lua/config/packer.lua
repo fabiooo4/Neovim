@@ -118,7 +118,7 @@ return require("packer").startup(function(use)
 				sources = {
 					ultisnips = {
 						-- Add snippets from (plugin) folders or individual files on your runtimepath...
-						"./latex-snippets/tex.snippets",
+						"./UltiSnips",
 						-- ...or use absolute paths on your system.
 						vim.fn.stdpath("config") .. "/UltiSnips",
 					},
