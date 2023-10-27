@@ -31,3 +31,9 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "0"
 
 vim.g.mapleader = " "
+
+-- Set makeprg for c files to compile with gcc
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "c",
+	command = [[setlocal makeprg=gcc\ -o\ %:p:r\ %:p\ -std=c99\ -W\ -Wall\ -lm]],
+})

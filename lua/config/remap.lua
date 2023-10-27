@@ -51,3 +51,9 @@ inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" 
 vim.cmd([[
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
 ]])
+
+vim.cmd([[
+nnoremap <leader><F5> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
+]])
+
+vim.keymap.set("n", "<leader><F5>", "<cmd>TermExec cmd='./%:r'<CR> <C-w>ji")
