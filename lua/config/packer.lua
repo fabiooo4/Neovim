@@ -34,6 +34,9 @@ return require("packer").startup(function(use)
 	-- Copilot
 	use("github/copilot.vim")
 
+	-- Smooth scroll
+	use("karb94/neoscroll.nvim")
+
 	-- Markdown
 	use("jakewvincent/mkdnflow.nvim")
 	use("dhruvasagar/vim-table-mode")
