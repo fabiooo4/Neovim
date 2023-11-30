@@ -37,6 +37,14 @@ return require("packer").startup(function(use)
 	-- Smooth scroll
 	use("karb94/neoscroll.nvim")
 
+	-- Comments
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
+
 	-- Markdown
 	use("jakewvincent/mkdnflow.nvim")
 	use("dhruvasagar/vim-table-mode")
