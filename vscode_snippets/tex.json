@@ -104,11 +104,6 @@
     "description": "Enumerate",
     "body": ["\\begin{enumerate\\}", "\t\\item $0", "\\end{enumerate\\}"]
   },
-  "item": {
-    "prefix": "item",
-    "description": "Itemize",
-    "body": ["\\begin{itemize\\}", "\t\\item $0", "\\end{itemize\\}"]
-  },
   "desc": {
     "prefix": "desc",
     "description": "Description",
@@ -127,6 +122,14 @@
     "prefix": "=>",
     "description": "implies",
     "body": "\\Rightarrow",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "<=>": {
+    "prefix": "=-=",
+    "description": "sse",
+    "body": "\\Leftrightarrow",
     "luasnip": {
       "autotrigger": true
     }
@@ -838,5 +841,84 @@
     "luasnip": {
       "autotrigger": true
     }
+  },
+  "@f": {
+    "prefix": "@f",
+    "description": "phi",
+    "body": "\\varphi ",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "@y": {
+    "prefix": "@y",
+    "description": "psi",
+    "body": "\\psi ",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "@g": {
+    "prefix": "@g",
+    "description": "gamma",
+    "body": "\\gamma ",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "@s": {
+    "prefix": "@s",
+    "description": "sigma",
+    "body": "\\sigma ",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "@r": {
+    "prefix": "@r",
+    "description": "rho",
+    "body": "\\rho ",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "@p": {
+    "prefix": "@p",
+    "description": "pi",
+    "body": "\\pi ",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "@e": {
+    "prefix": "@e",
+    "description": "epsilon",
+    "body": "\\varepsilon ",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "figureh": {
+    "prefix": "figureh",
+    "description": "Figure [H]",
+    "body": ["\\begin{figure\\}[H]", "\t$1", "\\end{figure\\}"],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "proof": {
+    "prefix": "proof",
+    "description": "Proof tree",
+    "body": ["\\begin{prooftree\\}", "\t$1", "\\end{prooftree\\}"]
+  },
+  "infer": {
+    "prefix": "infer",
+    "description": "infer",
+    "body": "\\infer${1:0}[\\( $2 \\)]{ $3 \\}"
+  },
+  "hypo": {
+    "prefix": "hypo",
+    "description": "hypo",
+    "body": "\\hypo{ $1 \\}"
   }
 }
