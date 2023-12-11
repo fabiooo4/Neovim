@@ -20,4 +20,5 @@
 - Code runner via [sniprun](https://github.com/michaelb/sniprun).
 - Markdown writing and previewing via [mkdnflow](https://github.com/jakewvincent/mkdnflow.nvim) and [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim).
 - LaTeX writing and previewing via [vimtex](https://github.com/lervag/vimtex#snippets-and-templates) and [sioyek](https://sioyek.info/).
+- Custom status line via [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim).
 - SIS custom syntax highlighting and nippets thanks to [Dapizz01](https://github.com/Dapizz01/SISvim).
