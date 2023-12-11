@@ -909,7 +909,10 @@
   "proof": {
     "prefix": "proof",
     "description": "Proof tree",
-    "body": ["\\begin{prooftree\\}", "\t$1", "\\end{prooftree\\}"]
+    "body": ["\\begin{prooftree\\}", "\t$1", "\\end{prooftree\\}"],
+    "luasnip": {
+      "autotrigger": true
+    }
   },
   "infer": {
     "prefix": "infer",
