@@ -923,5 +923,21 @@
     "prefix": "hypo",
     "description": "hypo",
     "body": "\\hypo{ $1 \\}"
+  },
+  "and": {
+    "prefix": "aan",
+    "description": "AND",
+    "body": ["\\wedge "],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "or": {
+    "prefix": "oor",
+    "description": "OR",
+    "body": ["\\vee "],
+    "luasnip": {
+      "autotrigger": true
+    }
   }
 }
