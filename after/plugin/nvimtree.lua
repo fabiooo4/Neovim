@@ -6,9 +6,12 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 -- custom mappings
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
-vim.keymap.set('n', '<leader>pv', ':NvimTreeFocus<CR>')
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>pv", ":NvimTreeFocus<CR>")
 
 -- pass to setup along with your other options
-require("nvim-tree").setup {}
-
+require("nvim-tree").setup({
+	view = {
+		side = "right",
+	},
+})
