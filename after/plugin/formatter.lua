@@ -13,7 +13,7 @@ conform.setup({
 		java = { "prettier" },
 		c = { "clang-format" },
 		cpp = { "clang-format" },
-		svelte = { "prettier" },
+		svelte = { "prettierd" },
 		tex = { "latexindent" },
 	},
 	format_on_save = {
