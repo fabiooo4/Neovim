@@ -37,3 +37,8 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = "c",
 	command = [[setlocal makeprg=gcc\ -o\ %:p:r\ %:p\ -g\ -std=c99\ -W\ -Wall\ -lm]],
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "cpp",
+	command = [[setlocal makeprg=g++\ -o\ %:p:r\ %:p\ -g\ -std=c99\ -W\ -Wall\ -lm]],
+})
