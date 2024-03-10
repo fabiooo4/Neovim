@@ -112,9 +112,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	-- SnipRun (run code)
-	use({ "michaelb/sniprun", run = "sh ./install.sh" })
-
 	-- Friendly Snippets
 	use("rafamadriz/friendly-snippets")
 
@@ -123,4 +120,7 @@ return require("packer").startup(function(use)
 		"hoob3rt/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
+
+	-- R
+	use("jalvesaq/Nvim-R")
 end)
