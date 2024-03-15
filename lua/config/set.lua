@@ -45,12 +45,12 @@ vim.api.nvim_create_autocmd("FileType", {
 -- Set colorcolumn for different filetypes
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "rmd",
-	command = [[ setlocal colorcolumn=72 ]],
+	command = [[ setlocal colorcolumn=73 ]],
 })
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "r",
-	command = [[ setlocal colorcolumn=72 ]],
+	command = [[ setlocal colorcolumn=73 ]],
 })
 
 vim.api.nvim_create_autocmd("FileType", {
