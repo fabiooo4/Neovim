@@ -27,9 +27,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-
 vim.opt.colorcolumn = "0"
-
 vim.g.mapleader = " "
 
 -- Set makeprg for c files to compile with gcc
@@ -38,7 +36,24 @@ vim.api.nvim_create_autocmd("FileType", {
 	command = [[setlocal makeprg=gcc\ -o\ %:p:r\ %:p\ -g\ -std=c99\ -W\ -Wall\ -lm]],
 })
 
+-- Set makeprg for c++ files to compile with g++
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "cpp",
 	command = [[setlocal makeprg=g++\ -o\ %:p:r\ %:p\ -g\ -W\ -Wall\ -lm]],
+})
+
+-- Set colorcolumn for different filetypes
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "rmd",
+	command = [[ setlocal colorcolumn=72 ]],
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "r",
+	command = [[ setlocal colorcolumn=72 ]],
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "tex",
+	command = [[ setlocal colorcolumn=90 ]],
 })
