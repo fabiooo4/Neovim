@@ -46,7 +46,6 @@ return require("packer").startup(function(use)
 	})
 
 	-- Markdown
-	use("jakewvincent/mkdnflow.nvim")
 	use("dhruvasagar/vim-table-mode")
 
 	-- Markdown Preview
