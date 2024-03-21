@@ -51,7 +51,7 @@ nnoremap <leader><F5> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/f
 
 -- Execute the current file
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "c,cpp,s",
+  pattern = "asm,c,cpp",
   command = [[
     nnoremap <leader><F5> :TermExec cmd='./%:r'<CR> <C-w>ji
   ]]
