@@ -49,7 +49,13 @@ vim.cmd([[
 nnoremap <leader><F5> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
 ]])
 
-vim.keymap.set("n", "<leader><F5>", "<cmd>TermExec cmd='./%:r'<CR> <C-w>ji")
+-- Execute the current file
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "c,cpp,s",
+  command = [[
+    nnoremap <leader><F5> :TermExec cmd='./%:r'<CR> <C-w>ji
+  ]]
+})
 
 if vim.g.neovide then
 	vim.keymap.set("n", "<C-v>", '"+P') -- Paste normal mode

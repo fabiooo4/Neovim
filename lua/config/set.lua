@@ -42,6 +42,12 @@ vim.api.nvim_create_autocmd("FileType", {
 	command = [[setlocal makeprg=g++\ -o\ %:p:r\ %:p\ -g\ -W\ -Wall\ -lm]],
 })
 
+-- Set makeprg for asm files to compile with as and ld
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "s",
+	command = [[setlocal makeprg=as\ -o\ %:p:r.o\ %:p\ &&\ ld\ -o\ %:p:r\ %:p:r.o]],
+})
+
 -- Set colorcolumn for different filetypes
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "rmd",
