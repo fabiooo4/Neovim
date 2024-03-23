@@ -757,6 +757,14 @@
       "autotrigger": true
     }
   },
+  "CC": {
+    "prefix": "CC",
+    "description": "C",
+    "body": "\\mathbb{C\\}",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
   "<!": {
     "prefix": "<!",
     "description": "normal",
