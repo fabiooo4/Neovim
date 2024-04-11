@@ -46,6 +46,7 @@ if vim.g.neovide then
 	vim.keymap.set("v", "<C-v>", '"+p') -- Paste visual mode
 	vim.keymap.set("c", "<C-v>", "<C-R>+") -- Paste command mode
 	vim.keymap.set("i", "<C-v>", '<ESC>"+pli') -- Paste insert mode
+	vim.keymap.set("t", "<C-v>", '<ESC>"+pli') -- Paste insert mode
 end
 
 -- Paste with C-v
