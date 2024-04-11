@@ -38,12 +38,7 @@ return require("packer").startup(function(use)
 	use("karb94/neoscroll.nvim")
 
 	-- Comments
-	use({
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-	})
+	use("numToStr/Comment.nvim")
 
 	-- Markdown
 	use("dhruvasagar/vim-table-mode")
