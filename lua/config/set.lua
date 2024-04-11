@@ -32,8 +32,8 @@ vim.g.mapleader = " "
 
 -- Set makeprg for asm files to compile with as and ld
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "asm",
-  command = [[setlocal makeprg=as\ -o\ %:p:r.o\ %:p\ &&\ ld\ -o\ %:p:r\ %:p:r.o]],
+	pattern = "asm",
+	command = [[setlocal makeprg=as\ -gstabs\ -o\ %:p:r.o\ %:p\ &&\ ld\ -o\ %:p:r\ %:p:r.o]],
 })
 
 -- Set makeprg for c files to compile with gcc
@@ -47,7 +47,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = "cpp",
 	command = [[setlocal makeprg=g++\ -o\ %:p:r\ %:p\ -g\ -W\ -Wall\ -lm]],
 })
-
 
 -- Set colorcolumn for different filetypes
 vim.api.nvim_create_autocmd("FileType", {
