@@ -276,7 +276,7 @@
   "lr{": {
     "prefix": "lr{",
     "description": "left\\{ right\\}",
-    "body": "\\left\\{ ${1:$TM_SELECTED_TEXT} \\right"
+    "body": "\\left\\{ ${1:$TM_SELECTED_TEXT} \\right\\"
   },
   "lrb": {
     "prefix": "lrb",
