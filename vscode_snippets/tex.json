@@ -266,7 +266,7 @@
   "lr(": {
     "prefix": "lr(",
     "description": "left( right)",
-    "body": "\\left( ${1:$TM_SELECTED_TEXT} \\right) $0"
+    "body": "\\left( ${1:$TM_SELECTED_TEXT} \\right"
   },
   "lr|": {
     "prefix": "lr|",
@@ -276,7 +276,7 @@
   "lr{": {
     "prefix": "lr{",
     "description": "left\\{ right\\}",
-    "body": "\\left\\{ ${1:$TM_SELECTED_TEXT} \\right\\\\} $0"
+    "body": "\\left\\{ ${1:$TM_SELECTED_TEXT} \\right"
   },
   "lrb": {
     "prefix": "lrb",
@@ -286,7 +286,15 @@
   "lr[": {
     "prefix": "lr[",
     "description": "left[ right]",
-    "body": "\\left[ ${1:$TM_SELECTED_TEXT} \\right] $0"
+    "body": "\\left[ ${1:$TM_SELECTED_TEXT} \\right"
+  },
+  "lrq": {
+    "prefix": "lrq",
+    "description": "left[ right]",
+    "body": "\\left[ ${1:$TM_SELECTED_TEXT} \\right] $0",
+    "luasnip": {
+      "autotrigger": true
+    }
   },
   "lra": {
     "prefix": "lra",
