@@ -693,6 +693,14 @@
       "autotrigger": true
     }
   },
+  "cll": {
+    "prefix": "cll",
+    "description": "mathcal",
+    "body": "\\mathcal{$1\\}",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
   "Nn": {
     "prefix": "Nn",
     "description": "cap",
