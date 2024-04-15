@@ -527,6 +527,14 @@
       "autotrigger": true
     }
   },
+  "mbb": {
+    "prefix": "mbb",
+    "description": "mathbb",
+    "body": "\\mathbb{$1\\}$0",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
   "lll": {
     "prefix": "lll",
     "description": "l",
@@ -689,14 +697,6 @@
     "prefix": "NN",
     "description": "n",
     "body": "\\mathbb{N\\}",
-    "luasnip": {
-      "autotrigger": true
-    }
-  },
-  "cll": {
-    "prefix": "cll",
-    "description": "mathcal",
-    "body": "\\mathcal{$1\\}",
     "luasnip": {
       "autotrigger": true
     }
