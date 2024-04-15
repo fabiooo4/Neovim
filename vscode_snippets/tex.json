@@ -1010,6 +1010,22 @@
       "autotrigger": true
     }
   },
+  "@o": {
+    "prefix": "@o",
+    "description": "omega",
+    "body": "\\omega",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "@O": {
+    "prefix": "@O",
+    "description": "Omega",
+    "body": "\\Omega",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
   "figureh": {
     "prefix": "figureh",
     "description": "Figure [H]",
