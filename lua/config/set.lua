@@ -94,5 +94,5 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "tex",
-	command = [[ setlocal colorcolumn=90 ]],
+	command = [[ setlocal colorcolumn=91 ]],
 })
