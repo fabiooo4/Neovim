@@ -34,9 +34,6 @@ return require("packer").startup(function(use)
 	-- Copilot
 	use("github/copilot.vim")
 
-	-- Smooth scroll
-	use("karb94/neoscroll.nvim")
-
 	-- Comments
 	use("numToStr/Comment.nvim")
 
