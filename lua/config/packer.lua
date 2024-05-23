@@ -114,7 +114,4 @@ return require("packer").startup(function(use)
 
 	-- R
 	use("jalvesaq/Nvim-R")
-
-  -- LiveServer
-  use("barrett-ruth/live-server.nvim")
 end)
