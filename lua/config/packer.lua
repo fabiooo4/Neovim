@@ -114,4 +114,19 @@ return require("packer").startup(function(use)
 
 	-- R
 	use("jalvesaq/Nvim-R")
+
+	-- For image viewing
+	-- Plenary
+	use("nvim-lua/plenary.nvim")
+
+	-- Baleia
+	use({ "m00qek/baleia.nvim", tag = "v1.4.0" })
+
+	-- Image.nvim
+	use({
+		"samodostal/image.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
 end)
