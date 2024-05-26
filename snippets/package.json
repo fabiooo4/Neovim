@@ -5,12 +5,6 @@
     "snippets": [
       {
         "language": [
-          "blif"
-        ],
-        "path": "./blif.json"
-      },
-      {
-        "language": [
           "tex"
         ],
         "path": "./tex.json"
