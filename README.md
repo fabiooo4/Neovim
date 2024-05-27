@@ -21,3 +21,5 @@
 - Custom snippets via [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 
 # 🛠️ Requirements
+
+- [Neovim 0.9.5+](https://github.com/neovim/neovim/releases/tag/stable)
