@@ -19,3 +19,5 @@
 - LaTeX writing and previewing via [Vimtex](https://github.com/lervag/vimtex#snippets-and-templates) and [sioyek](https://sioyek.info/)
 - Custom status line via [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - Custom snippets via [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+
+# 🛠️ Requirements

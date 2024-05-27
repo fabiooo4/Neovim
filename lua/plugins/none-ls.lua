@@ -1,5 +1,8 @@
 return {
 	"nvimtools/none-ls.nvim",
+	dependencies = {
+		"nvimtools/none-ls-extras.nvim",
+	},
 	config = function()
 		local async_formatting = function(bufnr)
 			bufnr = bufnr or vim.api.nvim_get_current_buf()
@@ -39,9 +42,9 @@ return {
 		null_ls.setup({
 			sources = {
 				null_ls.builtins.formatting.stylua,
-
 				null_ls.builtins.formatting.prettier,
-				null_ls.builtins.diagnostics.eslint,
+
+				require("none-ls.diagnostics.eslint_d"),
 			},
 
 			debug = false,
