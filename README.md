@@ -23,3 +23,41 @@
 # 🛠️ Requirements
 
 - [Neovim 0.9.5+](https://github.com/neovim/neovim/releases/tag/stable)
+- [Nerd Fonts](https://www.nerdfonts.com/font-downloads) (Optional)
+- A clipboard manager like [xclip](https://github.com/astrand/xclip) for system clipboard integration. (see [:help clipboard-tool](https://neovim.io/doc/user/provider.html#clipboard-tool))
+
+# 📦 Installation
+
+Clone this repository into your `~/.config/nvim` directory.
+
+```bash
+git clone https://github.com/fabiooo4/Neovim.git ~/.config/nvim
+```
+
+Open Neovim and Lazy will automatically install all the plugins. After installing all the plugins, you can restart Neovim and you are good to go.
+
+# 📝 Configuration
+
+You can configure the basic configuration files like vim remaps, sets, and Lazy in the [lua/config](./lua/config) directory.
+
+To configure the plugins, you can edit the existing files in the [lua/plugins](./lua/plugins) directory or create a new file for the plugin you want to
+configure. The basic configuration for each plugin must be a return table with the configuration options, like this:
+
+```lua
+return {
+    "short-plugin/name",
+    config = function()
+        -- Your configuration here
+    end
+}
+```
+
+To install the LSP servers, you can run the following command:
+
+```lua
+:Mason
+```
+
+and select the language server you want to install. You then have to add the configuration for the language server in the [lua/plugins/lsp.lua](./lua/plugins/lsp.lua) file.
+
+With Mason you can also install formatters and linters. You then have to add the configuration for the formatter and linter in the [lua/plugins/none-ls.lua](./lua/plugins/none-ls.lua) file.
