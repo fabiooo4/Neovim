@@ -1,25 +1,25 @@
 return {
-  'nvim-lualine/lualine.nvim',
+  "nvim-lualine/lualine.nvim",
   config = function()
-    require('lualine').setup({
+    require("lualine").setup({
       sections = {
         lualine_x = {
           {
-            'datetime',
-            style = "%H:%M"
-          }
+            "datetime",
+            style = "%H:%M",
+          },
         },
-        lualine_y = {'filetype'},
-        lualine_z = {'progress', 'location'}
+        lualine_y = { "filetype" },
+        lualine_z = { "progress", "location" },
       },
 
       options = {
-        theme = 'auto'
+        theme = "auto",
       },
 
       extensions = {
-        'neo-tree'
-      }
+        "neo-tree",
+      },
     })
-  end
+  end,
 }
