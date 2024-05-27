@@ -1,6 +1,6 @@
 # Colorscheme
 
-- [Catppuccin](https://github.com/catppuccin/nvim).
+![Preview](/../assets/preview.png?raw=true "Preview")
 
 # Features
 
