@@ -12,7 +12,7 @@ return {
   {
     "hrsh7th/nvim-cmp",
     config = function()
-      require("luasnip").config.setup({ enable_autosnippets = true })
+      require("luasnip").config.setup()
       local cmp = require("cmp")
       local luasnip = require("luasnip")
 
@@ -20,7 +20,10 @@ return {
         require("luasnip.loaders.from_vscode").lazy_load(),
 
         -- load snippets from directory
-        require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets" } }),
+        require("luasnip.loaders.from_vscode").lazy_load({
+          paths = { "./snippets" },
+          enable_autosnippets = true,
+        }),
 
         snippet = {
           -- REQUIRED - you must specify a snippet engine
@@ -34,7 +37,7 @@ return {
           -- documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
-          ["<CR>"] = cmp.mapping(function(fallback)
+          ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               if luasnip.expandable() then
                 luasnip.expand()
@@ -48,7 +51,7 @@ return {
             end
           end),
 
-          ["<Tab>"] = cmp.mapping(function(fallback)
+          ["<C-j>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_next_item()
             elseif luasnip.locally_jumpable(1) then
@@ -58,7 +61,7 @@ return {
             end
           end, { "i", "s" }),
 
-          ["<S-Tab>"] = cmp.mapping(function(fallback)
+          ["<C-k>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_prev_item()
             elseif luasnip.locally_jumpable(-1) then
