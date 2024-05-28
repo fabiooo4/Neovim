@@ -51,7 +51,7 @@ return {
             end
           end),
 
-          ["<C-j>"] = cmp.mapping(function(fallback)
+          ["<A-j>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_next_item()
             elseif luasnip.locally_jumpable(1) then
@@ -61,7 +61,7 @@ return {
             end
           end, { "i", "s" }),
 
-          ["<C-k>"] = cmp.mapping(function(fallback)
+          ["<A-k>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
               cmp.select_prev_item()
             elseif luasnip.locally_jumpable(-1) then
