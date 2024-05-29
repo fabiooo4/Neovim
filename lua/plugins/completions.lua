@@ -27,17 +27,6 @@ return {
 					exclude = { "global" },
 				}),
 
-				enabled = function()
-					-- disable completion in tex files
-					if vim.api.nvim_get_mode().mode == "c" then
-						return true
-					else
-						if vim.bo.filetype == "tex" then
-							return false
-						end
-					end
-				end,
-
 				snippet = {
 					-- REQUIRED - you must specify a snippet engine
 					expand = function(args)
