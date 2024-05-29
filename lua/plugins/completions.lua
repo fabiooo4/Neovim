@@ -12,7 +12,9 @@ return {
   {
     "hrsh7th/nvim-cmp",
     config = function()
-      require("luasnip").config.setup()
+      require("luasnip").config.setup({
+        enable_autosnippets = true,
+      })
       local cmp = require("cmp")
       local luasnip = require("luasnip")
 
@@ -22,7 +24,7 @@ return {
         -- load snippets from directory
         require("luasnip.loaders.from_vscode").lazy_load({
           paths = { "./snippets" },
-          enable_autosnippets = true,
+          exclude = { "global" },
         }),
 
         snippet = {
