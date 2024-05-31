@@ -49,6 +49,11 @@ return {
       -- keybinds
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+      -- convert to lua
+      -- vim.cmd([[
+      --      map <leader>d :lua vim.diagnostic.open_float(0, {scope="line"})<CR>
+      --    ]])
+      vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, {})
     end,
   },
 }
