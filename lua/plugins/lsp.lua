@@ -45,6 +45,7 @@ return {
       lspconfig.marksman.setup({ capabilities = capabilities })
       lspconfig.r_language_server.setup({ capabilities = capabilities })
       lspconfig.tsserver.setup({ capabilities = capabilities })
+      lspconfig.glsl_analyzer.setup({ capabilities = capabilities })
 
       -- keybinds
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
