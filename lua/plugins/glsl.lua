@@ -17,5 +17,13 @@ return {
         tese = "glsl",
       }
     })
+
+    -- Set tabstop to 4 for glsl files
+    vim.api.nvim_create_augroup('setIndent', { clear = true })
+    vim.api.nvim_create_autocmd('Filetype', {
+      group = 'setIndent',
+      pattern = { 'glsl', 'vert', 'frag', 'comp', 'geom', 'tesc', 'tese' },
+      command = 'setlocal shiftwidth=4 tabstop=4'
+    })
   end
 }
