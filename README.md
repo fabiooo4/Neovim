@@ -14,12 +14,15 @@
 - Syntax highlighting with [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - Open multiple tabs with [Barbar](https://github.com/romgrk/barbar.nvim)
 - Faster matching pair insertion with [Autopairs](https://github.com/windwp/nvim-autopairs)
+- Colored brackets with [Rainbow-delimiters](https://github.com/HiPhish/rainbow-delimiters.nvim)
 - Formatting and Linting with [None-ls](https://github.com/nvimtools/none-ls.nvim)
 - Language Server Protocol with [Mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
 - LaTeX writing and previewing via [Vimtex](https://github.com/lervag/vimtex#snippets-and-templates) and [sioyek](https://sioyek.info/)
-- Custom status line via [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
-- Image viewing with [image.nvim](https://github.com/3rd/image.nvim) (Requires [Kitty](https://sw.kovidgoyal.net/kitty/))
+- Custom status line via [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+- Image viewing with [Image.nvim](https://github.com/3rd/image.nvim) (Requires [Kitty](https://sw.kovidgoyal.net/kitty/))
 - Custom snippets via [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+- Smooth scrolling with [Neoscroll](https://github.com/karb94/neoscroll.nvim)
+- Fast commenting with [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 
 # 🛠️ Requirements
 
