@@ -46,6 +46,7 @@ return {
       lspconfig.r_language_server.setup({ capabilities = capabilities })
       lspconfig.tsserver.setup({ capabilities = capabilities })
       lspconfig.glsl_analyzer.setup({ capabilities = capabilities })
+      lspconfig.svelte.setup({ capabilities = capabilities })
 
       -- keybinds
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
