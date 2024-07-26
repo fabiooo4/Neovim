@@ -22,7 +22,6 @@ return {
 					"jsonls",
 					"marksman",
 					"tsserver",
-					"bibtex-tidy",
 					"cssls",
 					"glsl_analyzer",
 					"ltex",
