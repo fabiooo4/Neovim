@@ -23,10 +23,11 @@
 - Custom snippets via [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - Smooth scrolling with [Neoscroll](https://github.com/karb94/neoscroll.nvim)
 - Fast commenting with [Comment.nvim](https://github.com/numToStr/Comment.nvim)
+- Better web styling with [Tailwind-tools](https://github.com/luckasRanarison/tailwind-tools.nvim)
 
 # 🛠️ Requirements
 
-- [Neovim 0.9.5+](https://github.com/neovim/neovim/releases/tag/stable)
+- [Neovim 0.10+](https://github.com/neovim/neovim/releases/tag/stable)
 - [Nerd Fonts](https://www.nerdfonts.com/font-downloads) (Optional)
 - A clipboard manager like [xclip](https://github.com/astrand/xclip) for system clipboard integration. (see [:help clipboard-tool](https://neovim.io/doc/user/provider.html#clipboard-tool))
 
