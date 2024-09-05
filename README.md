@@ -24,6 +24,7 @@
 - Smooth scrolling with [Neoscroll](https://github.com/karb94/neoscroll.nvim)
 - Fast commenting with [Comment.nvim](https://github.com/numToStr/Comment.nvim)
 - Better web styling with [Tailwind-tools](https://github.com/luckasRanarison/tailwind-tools.nvim)
+- Undo list with [UndoTree](https://github.com/mbbill/undotree)
 
 # 🛠️ Requirements
 
