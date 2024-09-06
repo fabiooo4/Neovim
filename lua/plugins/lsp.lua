@@ -19,9 +19,9 @@ return {
 					"lua_ls",
 					"html",
 					"cssls",
+          "denols",
 					"jsonls",
 					"marksman",
-					"tsserver",
 					"cssls",
 					"glsl_analyzer",
 					"ltex",
@@ -45,9 +45,9 @@ return {
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.html.setup({ capabilities = capabilities })
 			lspconfig.cssls.setup({ capabilities = capabilities })
+			lspconfig.denols.setup({ capabilities = capabilities })
 			lspconfig.jsonls.setup({ capabilities = capabilities })
 			lspconfig.marksman.setup({ capabilities = capabilities })
-			lspconfig.tsserver.setup({ capabilities = capabilities })
 			lspconfig.glsl_analyzer.setup({ capabilities = capabilities })
 			lspconfig.svelte.setup({ capabilities = capabilities })
       lspconfig.tailwindcss.setup({ capabilities = capabilities })
