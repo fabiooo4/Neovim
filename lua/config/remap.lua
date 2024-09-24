@@ -20,10 +20,10 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("i", "<C-H>", "<C-W>", { noremap = true })
 
 -- Pane navigation
-vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
+--[[ vim.keymap.set("n", "<C-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
-vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
+vim.keymap.set("n", "<C-l>", ":wincmd l<CR>") ]]
 
 -- Execute the binary with the same name as the current file
 vim.api.nvim_create_autocmd("FileType", {

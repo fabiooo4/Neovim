@@ -1,5 +1,6 @@
 return {
   "timtro/glslView-nvim",
+  lazy = true,
   config = function()
     require('glslView').setup {
       viewer_path = 'glslViewer',

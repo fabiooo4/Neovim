@@ -1,11 +1,17 @@
+local enabled = false
 if not vim.env.TMUX then
+	enabled = true
+end
+
 return {
 	"knubie/vim-kitty-navigator",
+	enabled = enabled,
 	config = function()
-		vim.keymap.set("n", "<A-H>", ":wincmd h<CR>")
-		vim.keymap.set("n", "<A-J>", ":wincmd j<CR>")
-		vim.keymap.set("n", "<A-K>", ":wincmd k<CR>")
-		vim.keymap.set("n", "<A-L>", ":wincmd l<CR>")
+		vim.g.kitty_navigator_no_mappings = 1
+
+		vim.keymap.set("n", "<A-H>", "<cmd>KittyNavigateLeft<cr>", { noremap = true, silent = true })
+		vim.keymap.set("n", "<A-J>", "<cmd>KittyNavigateDown<cr>", { noremap = true, silent = true })
+		vim.keymap.set("n", "<A-K>", "<cmd>KittyNavigateUp<cr>", { noremap = true, silent = true })
+		vim.keymap.set("n", "<A-L>", "<cmd>KittyNavigateRight<cr>", { noremap = true, silent = true })
 	end,
 }
-else return {} end
