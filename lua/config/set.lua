@@ -30,7 +30,7 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "0"
 vim.g.mapleader = " "
 
--- Terminal colors
+--[[ -- Terminal colors
 --  black
 vim.g.terminal_color_0 = "#45475A"
 vim.g.terminal_color_8 = "#585B70"
@@ -61,7 +61,7 @@ vim.g.terminal_color_14 = "#94E2D5"
 
 --  white
 vim.g.terminal_color_7 = "#BAC2DE"
-vim.g.terminal_color_15 = "#A6ADC8"
+vim.g.terminal_color_15 = "#A6ADC8" ]]
 
 -- Set makeprg for asm files to compile with as and ld
 vim.api.nvim_create_autocmd("FileType", {
