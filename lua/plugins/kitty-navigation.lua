@@ -8,6 +8,7 @@ return {
 	enabled = enabled,
 	config = function()
 		vim.g.kitty_navigator_no_mappings = 1
+		vim.g.kitty_navigator_enable_stack_layout = 1
 
 		vim.keymap.set("n", "<A-H>", "<cmd>KittyNavigateLeft<cr>", { noremap = true, silent = true })
 		vim.keymap.set("n", "<A-J>", "<cmd>KittyNavigateDown<cr>", { noremap = true, silent = true })
