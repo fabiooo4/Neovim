@@ -2,7 +2,9 @@
 
 ![Preview](/../assets/preview.png?raw=true "Preview")
 
-🎨 **Color Scheme**: [Catppuccin](https://github.com/catppuccin/nvim)
+🎨 **Color Schems**: 
+- [Catppuccin](https://github.com/catppuccin/nvim)
+- [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
 
 # 💡 Features
 
