@@ -85,6 +85,7 @@ return {
 				"glsl_analyzer",
 				"svelte",
 				"tailwindcss",
+        "java",
 			}
 
 			for _, lsp in ipairs(servers) do
