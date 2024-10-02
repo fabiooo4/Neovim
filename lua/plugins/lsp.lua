@@ -27,7 +27,6 @@ return {
 					"ltex",
 					"svelte",
 					"tailwindcss",
-          "jdtls",
 				},
 			})
 		end,
@@ -86,7 +85,6 @@ return {
 				"glsl_analyzer",
 				"svelte",
 				"tailwindcss",
-        "jdtls",
 			}
 
 			for _, lsp in ipairs(servers) do
