@@ -21,6 +21,7 @@
 - Language Server Protocol with [Mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
 - LaTeX writing and previewing via [Vimtex](https://github.com/lervag/vimtex#snippets-and-templates) and [sioyek](https://sioyek.info/)
 - Custom status line via [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+- Battery status via [Battery.nvim](https://github.com/justinhj/battery.nvim)
 - Image viewing with [Image.nvim](https://github.com/3rd/image.nvim) (Requires [Kitty](https://sw.kovidgoyal.net/kitty/))
 - Custom snippets via [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - Smooth scrolling with [Neoscroll](https://github.com/karb94/neoscroll.nvim)
