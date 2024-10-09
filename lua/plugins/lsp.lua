@@ -19,7 +19,6 @@ return {
 					"lua_ls",
 					"html",
 					"cssls",
-					"denols",
 					"jsonls",
 					"marksman",
 					"cssls",
@@ -27,7 +26,8 @@ return {
 					"ltex",
 					"svelte",
 					"tailwindcss",
-					"hyprls",
+          "ts_ls",
+          "hyprls",
 				},
 			})
 		end,
@@ -80,12 +80,12 @@ return {
 				"lua_ls",
 				"html",
 				"cssls",
-				"denols",
 				"jsonls",
 				"marksman",
 				"glsl_analyzer",
 				"svelte",
 				"tailwindcss",
+        "ts_ls",
         "hyprls",
 			}
 
