@@ -1,9 +1,9 @@
 return {
-  "lervag/vimtex",
-  lazy = false, -- we don't want to lazy load VimTeX
-  init = function()
-    -- VimTeX configuration goes here
-    vim.cmd [[
+	"lervag/vimtex",
+	lazy = false, -- we don't want to lazy load VimTeX
+	init = function()
+		-- VimTeX configuration goes here
+		vim.cmd([[
       filetype plugin indent on
       syntax enable
 
@@ -26,6 +26,11 @@ return {
       endif
 
       nmap <leader>tc :VimtexTocToggle<CR>
-    ]]
-  end,
+
+      " Inkscape integration by Gilles Castell:
+      " https://github.com/gillescastel/
+      inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
+      nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
+    ]])
+	end,
 }
