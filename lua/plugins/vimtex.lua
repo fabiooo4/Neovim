@@ -7,8 +7,8 @@ return {
       filetype plugin indent on
       syntax enable
 
-      set conceallevel=1
-      " let g:tex_conceal='abdmg'
+      " Enable/Disable Conceal
+      set conceallevel=0
 
       if has('win32') || (has('unix') && exists('$WSLENV'))
           if executable('sioyek.exe')
