@@ -8,7 +8,7 @@ return {
       syntax enable
 
       set conceallevel=1
-      let g:tex_conceal='abdmg'
+      " let g:tex_conceal='abdmg'
 
       if has('win32') || (has('unix') && exists('$WSLENV'))
           if executable('sioyek.exe')
