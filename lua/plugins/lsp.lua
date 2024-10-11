@@ -27,7 +27,6 @@ return {
 					"svelte",
 					"tailwindcss",
           "ts_ls",
-          "hyprls",
 				},
 			})
 		end,
@@ -86,7 +85,6 @@ return {
 				"svelte",
 				"tailwindcss",
         "ts_ls",
-        "hyprls",
 			}
 
 			for _, lsp in ipairs(servers) do

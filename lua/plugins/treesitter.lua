@@ -10,10 +10,5 @@ return {
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
-
-		-- Hyprland highlighting
-		vim.filetype.add({
-			pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
-		})
 	end,
 }
