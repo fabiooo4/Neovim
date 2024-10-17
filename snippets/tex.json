@@ -1,87 +1,4 @@
 {
-  "template": {
-    "prefix": "templatelatex",
-    "description": "Basic template",
-    "body": [
-      "\\documentclass[a4paper]{article\\}",
-      "",
-      "\\usepackage[utf8]{inputenc\\}",
-      "\\usepackage[T1]{fontenc\\}",
-      "\\usepackage{textcomp\\}",
-      "\\usepackage[italian]{babel\\}",
-      "\\usepackage{amsmath, amssymb\\}",
-      "\\usepackage{amsfonts}",
-      "\\usepackage{mdframed}",
-      "\\usepackage{ntheorem}",
-      "\\usepackage{xcolor}",
-      "\\usepackage{graphicx}",
-      "\\graphicspath{{./figures/}}",
-      "",
-      "\\usepackage{import}",
-      "\\usepackage{pdfpages}",
-      "\\usepackage{transparent}",
-      "\\usepackage{xcolor}",
-      "",
-      "% Useful definitions frame",
-      "\\theoremstyle{break}",
-      "\\theoremheaderfont{\\bfseries}",
-      "\\newmdtheoremenv[%",
-      "linecolor=gray,leftmargin=0,%",
-      "rightmargin=0,",
-      "innertopmargin=8pt,%",
-      "ntheorem]{define}{Definizioni utili}[section]",
-      "",
-      "% Example frame",
-      "\\theoremstyle{break}",
-      "\\theoremheaderfont{\\bfseries}",
-      "\\newmdtheoremenv[%",
-      "linecolor=gray,leftmargin=0,%",
-      "rightmargin=0,",
-      "innertopmargin=8pt,%",
-      "ntheorem]{example}{Esempio}[section]",
-      "",
-      "% Important definition frame",
-      "\\theoremstyle{break}",
-      "\\theoremheaderfont{\\bfseries}",
-      "\\newmdtheoremenv[%",
-      "linecolor=gray,leftmargin=0,%",
-      "rightmargin=0,",
-      "backgroundcolor=gray!40,%",
-      "innertopmargin=8pt,%",
-      "ntheorem]{definition}{Definizione}[section]",
-      "",
-      "% Exercise frame",
-      "\\theoremstyle{break}",
-      "\\theoremheaderfont{\\bfseries}",
-      "\\newmdtheoremenv[%",
-      "linecolor=gray,leftmargin=0,%",
-      "rightmargin=0,",
-      "innertopmargin=8pt,%",
-      "ntheorem]{exercise}{Esercizio}[section]",
-      "",
-      "",
-      "% figure support",
-      "\\usepackage{import\\}",
-      "\\usepackage{xifthen\\}",
-      "\\pdfminorversion=7",
-      "\\usepackage{pdfpages\\}",
-      "\\usepackage{transparent\\}",
-      "\\newcommand{\\incfig\\}[1]{%",
-      "\t\\def\\svgwidth{\\columnwidth\\}",
-      "\t\\import{./figures/\\}{#1.pdf_tex\\}",
-      "\\}",
-      "",
-      "\\pdfsuppresswarningpagegroup=1",
-      "",
-      "\\begin{document\\}",
-      "\\input{title.tex}",
-      "",
-      "\\tableofcontents",
-      "\\pagebreak",
-      "",
-      "\\end{document\\}"
-    ]
-  },
   "beg": {
     "prefix": "beg",
     "description": "begin{} / end{}",
@@ -184,11 +101,6 @@
       "autotrigger": true
     }
   },
-  "/": {
-    "prefix": "/",
-    "description": "Fraction",
-    "body": "\\frac{$TM_SELECTED_TEXT\\}{$1\\}$0"
-  },
   "sympy": {
     "prefix": "sympy",
     "description": "sympyblock ",
@@ -246,14 +158,6 @@
     "prefix": "bmat",
     "description": "bmat",
     "body": "\\begin{bmatrix\\} $1 \\end{bmatrix\\} $0",
-    "luasnip": {
-      "autotrigger": true
-    }
-  },
-  "()": {
-    "prefix": "()",
-    "description": "left( right)",
-    "body": "\\left( ${1:$TM_SELECTED_TEXT} \\right) $0",
     "luasnip": {
       "autotrigger": true
     }
@@ -842,14 +746,6 @@
       "autotrigger": true
     }
   },
-  "letw": {
-    "prefix": "letw",
-    "description": "let omega",
-    "body": "Let \\$\\Omega \\subset \\C\\$ be open.",
-    "luasnip": {
-      "autotrigger": true
-    }
-  },
   "HH": {
     "prefix": "HH",
     "description": "H",
@@ -910,6 +806,22 @@
     "prefix": "@p",
     "description": "pi",
     "body": "\\pi ",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "@t": {
+    "prefix": "@t",
+    "description": "theta",
+    "body": "\\theta ",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
+  "@T": {
+    "prefix": "@T",
+    "description": "Theta",
+    "body": "\\Theta ",
     "luasnip": {
       "autotrigger": true
     }
