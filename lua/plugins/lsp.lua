@@ -23,7 +23,6 @@ return {
 					"marksman",
 					"cssls",
 					"glsl_analyzer",
-					"ltex",
 					"svelte",
 					"tailwindcss",
           "ts_ls",
