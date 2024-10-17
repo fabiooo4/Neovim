@@ -23,8 +23,9 @@ return {
 
         -- load snippets from directory
         require("luasnip.loaders.from_vscode").lazy_load({
-          paths = { "./snippets" },
+          paths = { "./lua/snippets" },
         }),
+        require("luasnip.loaders.from_lua").load({ paths = "./lua/snippets" }),
 
         snippet = {
           -- REQUIRED - you must specify a snippet engine
