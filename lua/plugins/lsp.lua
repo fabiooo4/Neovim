@@ -25,13 +25,20 @@ return {
 					"glsl_analyzer",
 					"svelte",
 					"tailwindcss",
-          "ts_ls",
+					"ts_ls",
 				},
 			})
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
+		opts = {
+			setup = {
+				rust_analyzer = function()
+					return true
+				end,
+			},
+		},
 		lazy = false,
 		priority = 51,
 		config = function()
@@ -74,7 +81,6 @@ return {
 
 			local servers = {
 				"clangd",
-				"rust_analyzer",
 				"lua_ls",
 				"html",
 				"cssls",
@@ -83,7 +89,7 @@ return {
 				"glsl_analyzer",
 				"svelte",
 				"tailwindcss",
-        "ts_ls",
+				"ts_ls",
 			}
 
 			for _, lsp in ipairs(servers) do
@@ -95,6 +101,42 @@ return {
 					},
 				})
 			end
+
+			vim.g.rustaceanvim = {
+        tools = {
+          test_executor = "background"
+        },
+				server = {
+					cmd = function()
+						local mason_registry = require("mason-registry")
+						if mason_registry.is_installed("rust-analyzer") then
+							-- This may need to be tweaked depending on the operating system.
+							local ra = mason_registry.get_package("rust-analyzer")
+							local ra_filename = ra:get_receipt():get().links.bin["rust-analyzer"]
+							return { ("%s/%s"):format(ra:get_install_path(), ra_filename or "rust-analyzer") }
+						else
+							-- global installation
+							return { "rust-analyzer" }
+						end
+					end,
+
+					on_attach = function(client, bufnr)
+						on_attach(client, bufnr)
+						local opts = { noremap = true, silent = true }
+						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader><F5>", "<cmd>RustLsp run<CR>", opts)
+						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>t", "<cmd>RustLsp testables<CR>", opts)
+						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>RustLsp codeAction<CR>", opts)
+						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>x", "<cmd>RustLsp explainError current<CR>", opts)
+						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rd", "<cmd>RustLsp openDocs<CR>", opts)
+					end,
+				},
+			}
 		end,
+	},
+	{
+		-- Rust custom lsp
+		"mrcjkb/rustaceanvim",
+		version = "^5", -- Recommended
+		lazy = false, -- This plugin is already lazy
 	},
 }
