@@ -818,6 +818,14 @@
       "autotrigger": true
     }
   },
+  "@m": {
+    "prefix": "@m",
+    "description": "mu",
+    "body": "\\mu",
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
   "@T": {
     "prefix": "@T",
     "description": "Theta",
