@@ -124,7 +124,7 @@ return {
 						on_attach(client, bufnr)
 						local opts = { noremap = true, silent = true }
 						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader><F5>", "<cmd>RustLsp run<CR>", opts)
-						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>t", "<cmd>RustLsp testables<CR>", opts)
+						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ct", "<cmd>RustLsp testables<CR>", opts)
 						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>RustLsp codeAction<CR>", opts)
 						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>x", "<cmd>RustLsp explainError current<CR>", opts)
 						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rd", "<cmd>RustLsp openDocs<CR>", opts)
