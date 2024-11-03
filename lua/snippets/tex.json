@@ -35,6 +35,18 @@
     "description": "Package",
     "body": "\\usepackage[${1:options}]{${2:package}\\}$0"
   },
+  "brbr": {
+    "prefix": "brbr",
+    "description": "vspace+noindent",
+    "body": [
+      "\\vspace{1em\\}",
+      "\\noindent",
+      "$1"
+    ],
+    "luasnip": {
+      "autotrigger": true
+    }
+  },
   "=>": {
     "prefix": "=>",
     "description": "implies",
