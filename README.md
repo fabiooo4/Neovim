@@ -31,6 +31,7 @@
 - Undo list with [UndoTree](https://github.com/mbbill/undotree)
 - Enhanced navigation with [Flash](https://github.com/folke/flash.nvim)
 - Fast parenthesis surrounding with [mini.surround](https://github.com/echasnovski/mini.surround)
+- Hex color rendering with [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 
 # 🛠️ Requirements
 
