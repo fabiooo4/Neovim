@@ -32,6 +32,8 @@
 - Enhanced navigation with [Flash](https://github.com/folke/flash.nvim)
 - Fast parenthesis surrounding with [mini.surround](https://github.com/echasnovski/mini.surround)
 - Hex color rendering with [nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
+- Markdown rendering with [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+- Markdown preview with [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
 
 # 🛠️ Requirements
 
