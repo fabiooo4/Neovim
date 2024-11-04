@@ -30,6 +30,7 @@
 - Better web styling with [Tailwind-tools](https://github.com/luckasRanarison/tailwind-tools.nvim)
 - Undo list with [UndoTree](https://github.com/mbbill/undotree)
 - Enhanced navigation with [Flash](https://github.com/folke/flash.nvim)
+- Fast parenthesis surrounding with [mini.surround](https://github.com/echasnovski/mini.surround)
 
 # 🛠️ Requirements
 
