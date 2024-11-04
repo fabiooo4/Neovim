@@ -16,6 +16,7 @@
 - Syntax highlighting with [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - Open multiple tabs with [Barbar](https://github.com/romgrk/barbar.nvim)
 - Faster matching pair insertion with [Autopairs](https://github.com/windwp/nvim-autopairs)
+- Tab out of parenthesis with [Tabout](https://github.com/abecodes/tabout.nvim)
 - Colored brackets with [Rainbow-delimiters](https://github.com/HiPhish/rainbow-delimiters.nvim)
 - Formatting and Linting with [None-ls](https://github.com/nvimtools/none-ls.nvim)
 - Language Server Protocol with [Mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
