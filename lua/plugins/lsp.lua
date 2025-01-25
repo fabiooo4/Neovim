@@ -113,9 +113,9 @@ return {
 								nixos = {
 									expr = '(builtins.getFlake "/home/fabibo/.dotfiles/.config/nixos").nixosConfigurations.nixos.options',
 								},
-								--[[ home_manager = {
-									expr = '(builtins.getFlake "/home/fabibo/.dotfiles/.config/nixos").homeConfigurations.nixos.options',
-								}, ]]
+								home_manager = {
+									expr = '(builtins.getFlake "/home/fabibo/.dotfiles/.config/nixos").homeConfigurations."fabibo@nixos".options',
+								},
 							},
 						},
 					},
