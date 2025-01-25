@@ -15,7 +15,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"clangd",
-					-- "rust_analyzer",
+					"rust_analyzer",
 					"lua_ls",
 					"html",
 					"cssls",
@@ -51,19 +51,6 @@ return {
 				local function buf_set_keymap(...)
 					vim.api.nvim_buf_set_keymap(bufnr, ...)
 				end
-
-				-- setup lsp
-				--[[ lspconfig.clangd.setup({ capabilities = capabilities })
-				lspconfig.rust_analyzer.setup({ capabilities = capabilities })
-				lspconfig.lua_ls.setup({ capabilities = capabilities })
-				lspconfig.html.setup({ capabilities = capabilities })
-				lspconfig.cssls.setup({ capabilities = capabilities })
-				lspconfig.denols.setup({ capabilities = capabilities })
-				lspconfig.jsonls.setup({ capabilities = capabilities })
-				lspconfig.marksman.setup({ capabilities = capabilities })
-				lspconfig.glsl_analyzer.setup({ capabilities = capabilities })
-				lspconfig.svelte.setup({ capabilities = capabilities })
-				lspconfig.tailwindcss.setup({ capabilities = capabilities }) ]]
 
 				-- keybinds
 				local opts = { noremap = true, silent = true }
@@ -102,10 +89,43 @@ return {
 				})
 			end
 
+			if
+				vim.fn.executable("nixd") == 1
+				and vim.fn.executable("alejandra") == 1
+				and vim.fn.executable("nixos-rebuild") == 1
+			then
+				lspconfig["nixd"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+					flags = {
+						debounce_text_changes = 150,
+					},
+					cmd = { "nixd" },
+					settings = {
+						nixd = {
+							nixpkgs = {
+								expr = "import <nixpkgs> {}",
+							},
+							formatting = {
+								command = { "alejandra" },
+							},
+							options = {
+								nixos = {
+									expr = '(builtins.getFlake "~/.dotfiles/.config/nixos").nixosConfigurations.nixos.options',
+								},
+								home_manager = {
+									expr = '(builtins.getFlake "~/.dotfiles/.config/nixos").homeConfigurations.nixos.options',
+								},
+							},
+						},
+					},
+				})
+			end
+
 			vim.g.rustaceanvim = {
-        tools = {
-          test_executor = "background"
-        },
+				tools = {
+					test_executor = "background",
+				},
 				server = {
 					cmd = function()
 						local mason_registry = require("mason-registry")
@@ -126,7 +146,13 @@ return {
 						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader><F5>", "<cmd>RustLsp run<CR>", opts)
 						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ct", "<cmd>RustLsp testables<CR>", opts)
 						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>RustLsp codeAction<CR>", opts)
-						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>x", "<cmd>RustLsp explainError current<CR>", opts)
+						vim.api.nvim_buf_set_keymap(
+							bufnr,
+							"n",
+							"<leader>x",
+							"<cmd>RustLsp explainError current<CR>",
+							opts
+						)
 						vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rd", "<cmd>RustLsp openDocs<CR>", opts)
 					end,
 				},
