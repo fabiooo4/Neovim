@@ -111,10 +111,10 @@ return {
 							},
 							options = {
 								nixos = {
-									expr = '(builtins.getFlake "/home/fabibo/.dotfiles/.config/nixos").nixosConfigurations.nixos.options',
+									expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.nixos.options',
 								},
 								home_manager = {
-									expr = '(builtins.getFlake "/home/fabibo/.dotfiles/.config/nixos").homeConfigurations."fabibo@nixos".options',
+									expr = '(builtins.getFlake ("git+file://" + toString ./.)).homeConfigurations.fabibo.options',
 								},
 							},
 						},
