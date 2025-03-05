@@ -27,7 +27,6 @@ return {
 					"tailwindcss",
 					"ts_ls",
 					"jedi_language_server",
-					"black",
 				},
 			})
 		end,
@@ -79,7 +78,6 @@ return {
 				"tailwindcss",
 				"ts_ls",
 				"jedi_language_server",
-				"black",
 			}
 
 			for _, lsp in ipairs(servers) do
