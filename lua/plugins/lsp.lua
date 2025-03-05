@@ -25,7 +25,6 @@ return {
 					"glsl_analyzer",
 					"svelte",
 					"tailwindcss",
-          "black",
 					"ts_ls",
 				},
 			})
@@ -77,7 +76,6 @@ return {
 				"svelte",
 				"tailwindcss",
 				"ts_ls",
-        "black",
 			}
 
 			for _, lsp in ipairs(servers) do
