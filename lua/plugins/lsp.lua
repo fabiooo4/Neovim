@@ -25,6 +25,7 @@ return {
 					"glsl_analyzer",
 					"svelte",
 					"tailwindcss",
+          "black",
 					"ts_ls",
 				},
 			})
@@ -67,7 +68,6 @@ return {
 			end
 
 			local servers = {
-				"clangd",
 				"lua_ls",
 				"html",
 				"cssls",
@@ -77,6 +77,7 @@ return {
 				"svelte",
 				"tailwindcss",
 				"ts_ls",
+        "black",
 			}
 
 			for _, lsp in ipairs(servers) do
@@ -157,6 +158,34 @@ return {
 					end,
 				},
 			}
+
+			-- Check if the ESP-IDF environment variable is set
+			local esp_idf_path = os.getenv("IDF_PATH")
+			if esp_idf_path then
+				-- for esp-idf
+				lspconfig["clangd"].setup({
+					-- handlers = handlers,
+					on_attach = on_attach,
+					capabilities = capabilities,
+					cmd = {
+						"/home/fabio/.espressif/tools/esp-clang/esp-18.1.2_20240912/esp-clang/bin/clangd",
+						"--background-index",
+						"--query-driver=**",
+					},
+					root_dir = function()
+						-- leave empty to stop nvim from cd'ing into ~/ due to global .clangd file
+					end,
+				})
+			else
+				-- clangd config
+				lspconfig["clangd"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+					flags = {
+						debounce_text_changes = 150,
+					},
+				})
+			end
 		end,
 	},
 	{
