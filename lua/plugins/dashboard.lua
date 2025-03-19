@@ -8,10 +8,10 @@ return {
 		if vim.fn.executable("lolcat") == 0 then
 			opts.preview.command = "tail -z"
 		else
-			if vim.fn.has("unix") == 1 then
-				opts.preview.command = "lolcat -x -v 1 -h 0 -o 17"
+			if vim.fn.has("mac") == 1 then
+        opts.preview.command = "lolcat -a -d 1"
 			else
-				opts.preview.command = "lolcat -a -d 1"
+        opts.preview.command = "lolcat -x -v 1 -h 0 -o 17"
 			end
 		end
 
