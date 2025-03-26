@@ -183,6 +183,7 @@ return {
 
 			-- Check if the ESP-IDF environment variable is set
 			local esp_idf_path = os.getenv("IDF_PATH")
+			local home = os.getenv("HOME")
 			if esp_idf_path then
 				-- for esp-idf
 				lspconfig["clangd"].setup({
@@ -190,7 +191,8 @@ return {
 					on_attach = on_attach,
 					capabilities = capabilities,
 					cmd = {
-						"/home/fabio/.espressif/tools/esp-clang/esp-18.1.2_20240912/esp-clang/bin/clangd",
+            home ..
+						"/.espressif/tools/esp-clang/esp-18.1.2_20240912/esp-clang/bin/clangd",
 						"--background-index",
 						"--query-driver=**",
 					},
