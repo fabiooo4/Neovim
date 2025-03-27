@@ -67,13 +67,9 @@ return {
 				mapping = cmp.mapping.preset.insert({
 					["<Tab>"] = cmp.mapping(function(fallback)
 						if cmp.visible() and vim.bo.filetype ~= "tex" then
-							if luasnip.expandable() then
-								luasnip.expand()
-							else
-								cmp.confirm({
-									select = true,
-								})
-							end
+              cmp.confirm({
+                select = true,
+              })
 						elseif luasnip.expand_or_locally_jumpable(1) then
 							luasnip.expand_or_jump(1)
 						else
@@ -108,8 +104,8 @@ return {
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
+          { name = "nvim_lsp_signature_help" }, -- function arg popups while typing
 					{ name = "luasnip" }, -- For luasnip users.
-					{ name = "nvim_lsp_signature_help" }, -- function arg popups while typing
 					{ name = "calc" }, -- Calculates any expression right away
 				}, {
 					{ name = "buffer" },
