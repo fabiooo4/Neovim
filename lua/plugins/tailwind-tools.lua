@@ -3,7 +3,7 @@ return {
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   opts = {
     conceal = {
-      enabled = true,
+      enabled = false,
       min_length = 60,
     }
   }
