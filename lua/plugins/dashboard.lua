@@ -1,5 +1,5 @@
 return {
-	"nvimdev/dashboard-nvim",
+	--[[ "nvimdev/dashboard-nvim",
 	event = "VimEnter",
 	opts = function(_, opts)
 		opts.preview = opts.preview or {}
@@ -51,5 +51,5 @@ return {
 			end,
 		}
 	end,
-	dependencies = { { "nvim-tree/nvim-web-devicons" } },
+	dependencies = { { "nvim-tree/nvim-web-devicons" } }, ]]
 }
