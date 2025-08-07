@@ -9,7 +9,27 @@ return {
   config = function()
     require("barbar").setup({
       auto_hide = 1,
+      animation = false,
     })
+
+    local colors = {
+      current_bg = "#282828",
+      current_fg = "#ebdbb2",
+      inactive_bg = "#1d2021",
+      inactive_fg = "#928374",
+      fill_bg = "#1d2021"
+    }
+
+    vim.api.nvim_set_hl(0, "BufferCurrent", { bg = colors.current_bg, fg = colors.current_fg })
+    vim.api.nvim_set_hl(0, "BufferCurrentSign", { bg = colors.current_bg, fg = colors.current_fg })
+    vim.api.nvim_set_hl(0, "BufferCurrentSignRight", { bg = colors.current_bg, fg = colors.current_fg })
+
+    vim.api.nvim_set_hl(0, "BufferInactive", { bg = colors.inactive_bg, fg = colors.inactive_fg })
+    vim.api.nvim_set_hl(0, "BufferInactiveSign", { bg = colors.inactive_bg, fg = colors.inactive_fg })
+    vim.api.nvim_set_hl(0, "BufferInactiveSignRight", { bg = colors.inactive_bg, fg = colors.inactive_fg })
+
+    vim.api.nvim_set_hl(0, "BufferTabpageFill", { bg = colors.fill_bg })
+    vim.api.nvim_set_hl(0, "BufferTabpagesSep", { bg = colors.fill_bg })
 
     local map = vim.api.nvim_set_keymap
     local opts = { noremap = true, silent = true }

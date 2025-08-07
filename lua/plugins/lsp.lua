@@ -29,7 +29,6 @@ return {
           "tailwindcss",
           "ts_ls",
           "jedi_language_server",
-          "jdtls",
         },
       })
     end,
@@ -40,10 +39,10 @@ return {
     version = "^5", -- Recommended
     lazy = false,   -- This plugin is already lazy
   },
-  {
+  --[[ {
     -- Java custom lsp
     "nvim-java/nvim-java",
-  },
+  }, ]]
   {
     "neovim/nvim-lspconfig",
     opts = {
@@ -56,7 +55,7 @@ return {
     lazy = false,
     priority = 51,
     config = function()
-      require("java").setup({
+      --[[ require("java").setup({
         -- load java debugger plugins
         java_debug_adapter = {
           enable = true,
@@ -65,7 +64,7 @@ return {
           -- disable 'Configuring DAP' & 'DAP configured' messages on start up
           dap = false,
         },
-      })
+      }) ]]
 
       local lspconfig = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -101,7 +100,6 @@ return {
         "tailwindcss",
         "ts_ls",
         "jedi_language_server",
-        "jdtls",
       }
 
       for _, lsp in ipairs(servers) do
