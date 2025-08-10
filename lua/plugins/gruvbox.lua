@@ -1,7 +1,8 @@
 return {
-	"ellisonleao/gruvbox.nvim",
-	priority = 1000,
-	config = function()
-		vim.o.background = "dark"
-	end,
+  "ellisonleao/gruvbox.nvim",
+  priority = 1000,
+  config = true,
+  opts = {
+    transparent_mode = true
+  }
 }
