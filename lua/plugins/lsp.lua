@@ -28,6 +28,7 @@ return {
           "svelte",
           "tailwindcss",
           "ts_ls",
+          "eslint",
           "jedi_language_server",
         },
       })
@@ -38,6 +39,16 @@ return {
     "mrcjkb/rustaceanvim",
     version = "^5", -- Recommended
     lazy = false,   -- This plugin is already lazy
+  },
+  {
+    -- Flutter custom lsp
+    'nvim-flutter/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim',
+    },
+    config = true,
   },
   --[[ {
     -- Java custom lsp
@@ -99,6 +110,7 @@ return {
         "svelte",
         "tailwindcss",
         "ts_ls",
+        "eslint",
         "jedi_language_server",
       }
 
@@ -107,7 +119,7 @@ return {
           on_attach = on_attach,
           capabilities = capabilities,
           flags = {
-            debounce_text_changes = 150,
+            debounce_text_changes = 50,
           },
         })
       end
