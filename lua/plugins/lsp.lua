@@ -30,6 +30,7 @@ return {
           "ts_ls",
           "eslint",
           "jedi_language_server",
+          "matlab_ls",
         },
       })
     end,
@@ -111,6 +112,7 @@ return {
         "ts_ls",
         "eslint",
         "jedi_language_server",
+        "matlab_ls",
       }
 
       for _, lsp in ipairs(servers) do
