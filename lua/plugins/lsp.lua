@@ -202,7 +202,9 @@ return {
       if esp_idf_path then
         -- for esp-idf
         vim.lsp.config("clangd", {
-          -- handlers = handlers,
+          -- Useful .clangd config to remove errors
+          -- CompileFlags:
+          --   Remove: [-fno-tree-switch-conversion, -fno-shrink-wrap, -mtext-section-literals, -mlongcalls, -fstrict-volatile-bitfields, -march=rv32imac_zicsr_zifencei]
           on_attach = on_attach,
           capabilities = capabilities,
           cmd = {
@@ -211,9 +213,9 @@ return {
             "--background-index",
             "--query-driver=**",
           },
-          root_dir = function()
+          --[[ root_dir = function()
             -- leave empty to stop nvim from cd'ing into ~/ due to global .clangd file
-          end,
+          end, ]]
         })
         vim.lsp.enable("clangd")
       else
