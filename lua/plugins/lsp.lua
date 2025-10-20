@@ -77,7 +77,6 @@ return {
         },
       }) ]]
 
-      local lspconfig = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       -- Use an on_attach function to only map the following keys
@@ -115,13 +114,14 @@ return {
       }
 
       for _, lsp in ipairs(servers) do
-        lspconfig[lsp].setup({
+        vim.lsp.config(lsp, {
           on_attach = on_attach,
           capabilities = capabilities,
           flags = {
             debounce_text_changes = 50,
           },
         })
+        vim.lsp.enable(lsp)
       end
 
       if
@@ -129,7 +129,7 @@ return {
           and vim.fn.executable("alejandra") == 1
           and vim.fn.executable("nixos-rebuild") == 1
       then
-        lspconfig["nixd"].setup({
+        vim.lsp.config("nixd", {
           on_attach = on_attach,
           capabilities = capabilities,
           flags = {
@@ -155,6 +155,7 @@ return {
             },
           },
         })
+        vim.lsp.enable("nixd")
       end
 
       vim.g.rustaceanvim = {
@@ -198,7 +199,7 @@ return {
       local home = os.getenv("HOME")
       if esp_idf_path then
         -- for esp-idf
-        lspconfig["clangd"].setup({
+        vim.lsp.config("clangd", {
           -- handlers = handlers,
           on_attach = on_attach,
           capabilities = capabilities,
@@ -212,15 +213,17 @@ return {
             -- leave empty to stop nvim from cd'ing into ~/ due to global .clangd file
           end,
         })
+        vim.lsp.enable("clangd")
       else
         -- clangd config
-        lspconfig["clangd"].setup({
+        vim.lsp.config("clangd", {
           on_attach = on_attach,
           capabilities = capabilities,
           flags = {
             debounce_text_changes = 150,
           },
         })
+        vim.lsp.enable("clangd")
       end
     end,
   },
