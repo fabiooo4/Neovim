@@ -132,14 +132,14 @@ return {
           and vim.fn.executable("nixos-rebuild") == 1
       then
         local nixos_expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.nixos.options';
-        local home_manager_expr = '(builtins.getFlake ("git+file://" + toString ./.)).homeConfigurations.fabibo.options';
+        local home_manager_expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.fabibo.options.home-manager.users.type';
         local flake_path = os.getenv("FLAKE");
 
         local username = os.getenv("USER")
         local hostname = vim.fn.trim(vim.fn.system("hostname"))
         if flake_path then
           nixos_expr = '(builtins.getFlake ("git+file://' .. flake_path .. '")).nixosConfigurations.' .. hostname .. '.options';
-          home_manager_expr = '(builtins.getFlake ("git+file://' .. flake_path .. '")).homeConfigurations.' .. username .. '.options';
+          home_manager_expr = '(builtins.getFlake ("git+file://' .. flake_path .. '")).nixosConfigurations.' .. username .. '.options.home-manager-users.type';
         end
 
         vim.lsp.config("nixd", {
