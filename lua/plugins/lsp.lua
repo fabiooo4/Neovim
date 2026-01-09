@@ -31,6 +31,7 @@ return {
           "eslint",
           "jedi_language_server",
           "matlab_ls",
+          "nil_ls",
         },
       })
     end,
@@ -128,23 +129,59 @@ return {
 
       if
           vim.fn.executable("nixd") == 1
+          and vim.fn.executable("nil") == 1
           and vim.fn.executable("alejandra") == 1
           and vim.fn.executable("nixos-rebuild") == 1
       then
         local nixos_expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.nixos.options';
-        local home_manager_expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.fabibo.options.home-manager.users.type';
-        local nixpkgs_expr = 'import (builtins.getFlake (builtins.toString ./.)).inputs.nixpkgs { }';
+        local home_manager_expr =
+        '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.fabibo.options.home-manager.users.type';
+        -- local nixpkgs_expr = 'import (builtins.getFlake (builtins.toString ./.)).inputs.nixpkgs { }';
+        local nixpkgs_expr = 'import <nixpkgs> { }';
         local flake_path = os.getenv("FLAKE");
 
-        local username = os.getenv("USER")
         local hostname = vim.fn.trim(vim.fn.system("hostname"))
         if flake_path then
-          nixos_expr = '(builtins.getFlake ("git+file://' .. flake_path .. '")).nixosConfigurations.' .. hostname .. '.options';
-          home_manager_expr = '(builtins.getFlake ("git+file://' .. flake_path .. '")).nixosConfigurations.' .. username .. '.options.home-manager-users.type';
+          nixos_expr = '(builtins.getFlake ("git+file://' ..
+              flake_path .. '")).nixosConfigurations.' .. hostname .. '.options';
+          home_manager_expr = '(builtins.getFlake ("git+file://' ..
+              flake_path .. '")).nixosConfigurations.' .. hostname .. '.options.home-manager.users.type';
         end
 
+
+        local nixd_on_attach = function(client, bufnr)
+          on_attach(client, bufnr)
+
+          -- Disable everything EXCEPT completions, since I use
+          -- both nixd and nil, and nil is better at everything else
+          client.server_capabilities.codeActionProvider = nil
+          client.server_capabilities.definitionProvider = false
+          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.documentSymbolProvider = false
+          client.server_capabilities.documentHighlightProvider = false
+          client.server_capabilities.hoverProvider = false
+          client.server_capabilities.inlayHintProvider = false
+          client.server_capabilities.referencesProvider = false
+          client.server_capabilities.renameProvider = false
+        end
+
+        local nil_on_attach = function(client, bufnr)
+          on_attach(client, bufnr)
+
+          -- Get completion from nixd, and everything else from nil
+          client.server_capabilities.completionProvider = nil
+        end
+
+        vim.lsp.config("nil_ls", {
+          on_attach = nil_on_attach,
+          capabilities = capabilities,
+          flags = {
+            debounce_text_changes = 150,
+          },
+        })
+
         vim.lsp.config("nixd", {
-          on_attach = on_attach,
+          on_attach = nixd_on_attach,
           capabilities = capabilities,
           flags = {
             debounce_text_changes = 150,
@@ -152,8 +189,9 @@ return {
           cmd = { "nixd" },
           settings = {
             nixd = {
+              single_file = true,
               nixpkgs = {
-                expr = nixpkgs_expr;
+                expr = nixpkgs_expr,
               },
               formatting = {
                 command = { "alejandra" },
