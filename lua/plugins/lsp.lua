@@ -179,6 +179,7 @@ return {
             debounce_text_changes = 150,
           },
         })
+        vim.lsp.enable("nil_ls")
 
         vim.lsp.config("nixd", {
           on_attach = nixd_on_attach,
