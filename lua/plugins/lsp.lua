@@ -156,7 +156,7 @@ return {
           -- both nixd and nil, and nil is better at everything else
           client.server_capabilities.codeActionProvider = nil
           client.server_capabilities.definitionProvider = false
-          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.documentFormattingProvider = true
           client.server_capabilities.documentSymbolProvider = false
           client.server_capabilities.documentHighlightProvider = false
           client.server_capabilities.hoverProvider = false
@@ -171,6 +171,7 @@ return {
           -- Get completion from nixd, and everything else from nil
           client.server_capabilities.completionProvider = nil
           client.server_capabilities.semanticTokensProvider = nil
+          client.server_capabilities.documentFormattingProvider = false
         end
 
         vim.lsp.config("nil_ls", {
