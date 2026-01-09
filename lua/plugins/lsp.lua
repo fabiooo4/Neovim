@@ -152,7 +152,7 @@ return {
         local nixd_on_attach = function(client, bufnr)
           on_attach(client, bufnr)
 
-          -- Disable everything EXCEPT completions, since I use
+          -- Disable everything EXCEPT completions and highlighting, since I use
           -- both nixd and nil, and nil is better at everything else
           client.server_capabilities.codeActionProvider = nil
           client.server_capabilities.definitionProvider = false
@@ -170,6 +170,7 @@ return {
 
           -- Get completion from nixd, and everything else from nil
           client.server_capabilities.completionProvider = nil
+          client.server_capabilities.semanticTokensProvider = nil
         end
 
         vim.lsp.config("nil_ls", {
