@@ -133,6 +133,7 @@ return {
       then
         local nixos_expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.nixos.options';
         local home_manager_expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.fabibo.options.home-manager.users.type';
+        local nixpkgs_expr = 'import (builtins.getFlake (builtins.toString ./.)).inputs.nixpkgs { }';
         local flake_path = os.getenv("FLAKE");
 
         local username = os.getenv("USER")
@@ -152,7 +153,7 @@ return {
           settings = {
             nixd = {
               nixpkgs = {
-                expr = "import <nixpkgs> {}",
+                expr = nixpkgs_expr;
               },
               formatting = {
                 command = { "alejandra" },
