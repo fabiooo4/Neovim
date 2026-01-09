@@ -33,6 +33,39 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "0"
 vim.g.mapleader = " "
 
+-- Neovide-specific font settings
+if vim.g.neovide then
+	local function get_kitty_font()
+		local kitty_conf = os.getenv("HOME") .. "/.config/kitty/kitty.conf"
+
+		local f = io.open(kitty_conf, "r")
+		if not f then
+			return nil
+		end
+
+		local font_name = nil
+		for line in f:lines() do
+			local match = line:match("^font_family%s+(.+)$")
+			if match then
+				-- Extract only font name
+				match = match:gsub("%s*#.*", "")
+				match = match:gsub("^family=", "")
+				match = match:gsub("['\"]", "")
+
+				font_name = match:match("^%s*(.-)%s*$")
+				break
+			end
+		end
+		f:close()
+		return font_name
+	end
+
+	local font = get_kitty_font() or "Monospace"
+	local size = ":h16"
+
+	vim.opt.guifont = font .. size
+end
+
 -- Set makeprg for asm files to compile with as and ld
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "asm",

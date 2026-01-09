@@ -9,13 +9,18 @@ return {
   {
     "3rd/image.nvim",
     -- dependencies = { "luarocks.nvim" },
+
+    -- Load only if not in neovide
+    cond = function()
+      return not vim.g.neovide
+    end,
     config = function()
       require("image").setup({
         backend = "kitty",
         integrations = {
           markdown = {
             enabled = true,
-            clear_in_insert_mode = false,
+            clear_in_insert_mode = true,
             download_remote_images = true,
             only_render_image_at_cursor = false,
             filetypes = { "markdown", "vimwiki" }, -- markdown extensions (ie. quarto) can go here
