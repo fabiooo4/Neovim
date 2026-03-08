@@ -107,6 +107,6 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "md",
+	pattern = "markdown",
 	command = [[ setlocal colorcolumn=88 ]],
 })
