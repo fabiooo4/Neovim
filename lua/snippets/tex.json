@@ -987,7 +987,7 @@
   "and": {
     "prefix": "aan",
     "description": "AND",
-    "body": ["\\wedge "],
+    "body": ["\\land "],
     "luasnip": {
       "autotrigger": true
     }
@@ -995,7 +995,7 @@
   "or": {
     "prefix": "oor",
     "description": "OR",
-    "body": ["\\vee "],
+    "body": ["\\lor "],
     "luasnip": {
       "autotrigger": true
     }
