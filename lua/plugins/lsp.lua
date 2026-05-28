@@ -27,11 +27,10 @@ return {
 				"tailwindcss",
 				"ts_ls",
 				"eslint",
-				"jedi_language_server",
 				"matlab_ls",
 				"nil_ls",
 				"jdtls",
-        "basedpyright"
+				"basedpyright",
 			}
 
 			-- If on nixos ensure_installed should be empty
@@ -131,8 +130,8 @@ return {
 				"tailwindcss",
 				"ts_ls",
 				"eslint",
-				"jedi_language_server",
 				"matlab_ls",
+				"basedpyright",
 			}
 
 			for _, lsp in ipairs(servers) do
@@ -274,14 +273,14 @@ return {
 				},
 			}
 
-      -- Java seup
+			-- Java seup
 			vim.lsp.config("jdtls", {
 				on_attach = on_attach,
 				capabilities = capabilities,
 				flags = {
 					debounce_text_changes = 150,
 				},
-        root_markers = { "pom.xml", "build.gradle", "mvnw", "gradlew" },
+				root_markers = { "pom.xml", "build.gradle", "mvnw", "gradlew" },
 			})
 			vim.lsp.enable("jdtls")
 
