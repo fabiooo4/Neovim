@@ -27,7 +27,6 @@ return {
 				"tailwindcss",
 				"ts_ls",
 				"eslint",
-				"matlab_ls",
 				"nil_ls",
 				"jdtls",
 				"basedpyright",
@@ -130,7 +129,6 @@ return {
 				"tailwindcss",
 				"ts_ls",
 				"eslint",
-				"matlab_ls",
 				"basedpyright",
 			}
 
