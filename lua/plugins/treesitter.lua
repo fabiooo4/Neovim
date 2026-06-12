@@ -61,19 +61,35 @@ return {
 			"sj",
 			"indents",
 			[[
-        ((block) @indent.begin)
-        "}" @indent.branch
+        [
+          (block)
+          (list)
+          (parenthesized_expression)
+          (formal_params)
+          (actual_params)
+          (binary_expression)
+          (conditional_expression)
+        ] @indent.begin
+
+        [
+          "}"
+          "]"
+          ")"
+        ] @indent.branch @indent.end
+
+        "else" @indent.branch
       ]]
 		)
 
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = "sj",
 			callback = function()
-				vim.opt_local.smartindent = false
-				vim.opt_local.shiftwidth = 4
-				vim.opt_local.tabstop = 4
-				vim.opt_local.softtabstop = 4
-				vim.opt_local.expandtab = true
+				vim.bo.shiftwidth = 4
+				vim.bo.tabstop = 4
+				vim.bo.softtabstop = 4
+				vim.bo.expandtab = true
+				vim.bo.autoindent = true
+				vim.bo.smartindent = false
 				vim.treesitter.start()
 			end,
 		})
