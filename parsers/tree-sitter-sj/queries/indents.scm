@@ -1,0 +1,2 @@
+["{"] @indent.begin
+["}"] @indent.end
