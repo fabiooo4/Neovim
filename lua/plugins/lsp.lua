@@ -286,6 +286,11 @@ return {
 			local esp_idf_path = os.getenv("IDF_PATH")
 			local home = os.getenv("HOME")
 			if esp_idf_path then
+        local command = home .. "/.espressif/tools/esp-clang/esp-18.1.2_20240912/esp-clang/bin/clangd"
+        if vim.fn.executable("nixos-rebuild") == 1 then
+          command = "clangd"
+        end
+
 				-- for esp-idf
 				vim.lsp.config("clangd", {
 					-- Useful .clangd config to remove errors
@@ -294,7 +299,7 @@ return {
 					on_attach = on_attach,
 					capabilities = capabilities,
 					cmd = {
-						home .. "/.espressif/tools/esp-clang/esp-18.1.2_20240912/esp-clang/bin/clangd",
+            command,
 						"--background-index",
 						"--query-driver=**",
 					},
