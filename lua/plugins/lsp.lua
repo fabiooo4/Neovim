@@ -1,7 +1,6 @@
 return {
 	{
 		"williamboman/mason.nvim",
-		version = "^1.0.0",
 		lazy = false,
 		priority = 53,
 		config = function()

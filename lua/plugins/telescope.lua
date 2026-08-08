@@ -2,8 +2,11 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     lazy = false,
-    tag = "0.1.6",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    version = '*',
+    dependencies = { 
+      "nvim-lua/plenary.nvim",
+      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    },
     config = function()
       local builtin = require("telescope.builtin")
       vim.keymap.set("n", "<leader>f", builtin.find_files, {})
